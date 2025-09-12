@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>📁 Navegador de Archivos HTML</title>
+    <title>📚 Biblioteca de Documentos - resultats</title>
     <style>
         * {
             margin: 0;
@@ -26,7 +26,6 @@
             border-radius: 20px;
             padding: 30px;
             box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
-            backdrop-filter: blur(10px);
         }
 
         .header {
@@ -36,16 +35,6 @@
             background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
             border-radius: 15px;
             color: white;
-        }
-
-        .header h1 {
-            font-size: 2.5em;
-            margin-bottom: 10px;
-        }
-
-        .header p {
-            opacity: 0.9;
-            font-size: 1.1em;
         }
 
         .search-box {
@@ -73,7 +62,7 @@
 
         .files-container {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
             gap: 20px;
             margin-top: 20px;
         }
@@ -81,11 +70,10 @@
         .file-card {
             background: white;
             border-radius: 15px;
-            padding: 20px;
+            padding: 25px;
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
             transition: all 0.3s ease;
             border: 2px solid transparent;
-            cursor: pointer;
             text-decoration: none;
             color: inherit;
             display: block;
@@ -98,32 +86,43 @@
         }
 
         .file-icon {
-            font-size: 3em;
+            font-size: 2.5em;
             text-align: center;
             margin-bottom: 15px;
             color: #4facfe;
         }
 
-        .file-name {
+        .file-title {
             font-weight: bold;
-            font-size: 1.2em;
-            margin-bottom: 8px;
+            font-size: 1.3em;
+            margin-bottom: 12px;
             color: #2c3e50;
-            word-break: break-word;
+            line-height: 1.3;
         }
 
         .file-info {
             color: #6c757d;
             font-size: 0.9em;
+            margin-bottom: 8px;
+            border-top: 1px solid #eee;
+            padding-top: 8px;
+        }
+
+        .file-filename {
+            font-family: 'Courier New', monospace;
+            background: #f8f9fa;
+            padding: 3px 8px;
+            border-radius: 4px;
+            font-size: 0.85em;
         }
 
         .file-size {
             background: #e9ecef;
-            padding: 4px 8px;
-            border-radius: 12px;
-            font-size: 0.8em;
+            padding: 4px 10px;
+            border-radius: 15px;
+            font-size: 0.85em;
             display: inline-block;
-            margin-top: 8px;
+            margin-right: 8px;
         }
 
         .no-files {
@@ -133,20 +132,13 @@
             font-size: 1.1em;
         }
 
-        .loading {
-            text-align: center;
-            padding: 40px;
-            color: #4facfe;
-            font-size: 1.2em;
-        }
-
         .stats {
             margin-top: 30px;
-            padding: 15px;
+            padding: 20px;
             background: #f8f9fa;
             border-radius: 10px;
             text-align: center;
-            font-size: 0.9em;
+            font-size: 0.95em;
             color: #6c757d;
         }
 
@@ -159,128 +151,70 @@
                 padding: 15px;
                 margin: 10px;
             }
-            
-            .header h1 {
-                font-size: 2em;
-            }
-        }
-
-        .last-modified {
-            font-size: 0.8em;
-            color: #28a745;
-            margin-top: 5px;
         }
     </style>
 </head>
 <body>
     <div class="container">
         <div class="header">
-            <h1>📁 Navegador de Archivos HTML</h1>
-            <p>Explora y accede a todos los documentos disponibles</p>
+            <h1>📚 Biblioteca de Documentos</h1>
+            <p>Repositorio: ciclisme/resultats</p>
         </div>
 
         <div class="search-box">
-            <input type="text" id="searchInput" placeholder="🔍 Buscar archivos..." onkeyup="filterFiles()">
+            <input type="text" id="searchInput" placeholder="🔍 Buscar por título o nombre de archivo..." onkeyup="filterFiles()">
         </div>
 
         <div id="filesContainer" class="files-container">
-            <div class="loading">
-                <p>🔄 Buscando archivos HTML...</p>
-            </div>
+            
+                <a href="https://ciclisme.github.io/resultats/2025_09_14_AITONA___5a_Copa_Catalana_Pumptrack_2025.html" class="file-card" data-filename="2025_09_14_AITONA___5a_Copa_Catalana_Pumptrack_2025.html">
+                    <div class="file-icon">📄</div>
+                    <div class="file-title">Classificació AITONA - 5a Copa Catalana Pumptrack 2025</div>
+                    <div class="file-info">
+                        <span class="file-size">44.92 KB</span>
+                        Archivo: <span class="file-filename">2025_09_14_AITONA___5a_Copa_Catalana_Pumptrack_2025.html</span>
+                    </div>
+                </a>
+            
+
+                <a href="https://ciclisme.github.io/resultats/2025_09_14_AITONA___5a_Copa_Catalana_Pumptrack_2025_Kids.html" class="file-card" data-filename="2025_09_14_AITONA___5a_Copa_Catalana_Pumptrack_2025_Kids.html">
+                    <div class="file-icon">📄</div>
+                    <div class="file-title">Classificació AITONA - 5a Copa Catalana Pumptrack 2025 Kids</div>
+                    <div class="file-info">
+                        <span class="file-size">44.93 KB</span>
+                        Archivo: <span class="file-filename">2025_09_14_AITONA___5a_Copa_Catalana_Pumptrack_2025_Kids.html</span>
+                    </div>
+                </a>
+            
+
+                <a href="https://ciclisme.github.io/resultats/7_9_2025_LLI___D_AMUNT___5a_Copa_Catalana_Pumptrack_2025_Kids.html" class="file-card" data-filename="7_9_2025_LLI___D_AMUNT___5a_Copa_Catalana_Pumptrack_2025_Kids.html">
+                    <div class="file-icon">📄</div>
+                    <div class="file-title">Classificació LLIÇÀ D'AMUNT - 5a Copa Catalana Pumptrack 2025 Kids</div>
+                    <div class="file-info">
+                        <span class="file-size">111.78 KB</span>
+                        Archivo: <span class="file-filename">7_9_2025_LLI___D_AMUNT___5a_Copa_Catalana_Pumptrack_2025_Kids.html</span>
+                    </div>
+                </a>
+            
         </div>
 
-        <div class="stats" id="stats">
-            Cargando estadísticas...
+        <div class="stats">
+            📊 Total documentos: <strong>3</strong> | 
+            📦 Tamaño total: <strong>201.64 KB</strong> | 
+            📅 Índice actualizado: <strong>2025-09-12 22:32:02</strong>
         </div>
     </div>
 
     <script>
-        // Función principal para buscar y mostrar archivos HTML
-        async function loadHTMLFiles() {
-            const filesContainer = document.getElementById('filesContainer');
-            const statsElement = document.getElementById('stats');
-            
-            try {
-                // Obtener lista de archivos del directorio actual
-                const response = await fetch(window.location.href);
-                const html = await response.text();
-                
-                // Parsear el HTML para encontrar enlaces a archivos .html
-                const parser = new DOMParser();
-                const doc = parser.parseFromString(html, 'text/html');
-                const links = doc.querySelectorAll('a[href$=".html"]');
-                
-                // Filtrar y ordenar archivos
-                const htmlFiles = Array.from(links)
-                    .map(link => {
-                        const href = link.getAttribute('href');
-                        // Excluir el archivo actual y archivos muy comunes
-                        if (href === 'index.html' || href.includes('://')) {
-                            return null;
-                        }
-                        return {
-                            name: href,
-                            fullName: href,
-                            displayName: href.replace('.html', '').replace(/-/g, ' ').replace(/_/g, ' '),
-                            url: href
-                        };
-                    })
-                    .filter(file => file !== null)
-                    .sort((a, b) => a.name.localeCompare(b.name));
-                
-                // Mostrar resultados
-                if (htmlFiles.length === 0) {
-                    filesContainer.innerHTML = `
-                        <div class="no-files">
-                            <div style="font-size: 4em; margin-bottom: 20px;">📂</div>
-                            <h3>No se encontraron archivos HTML</h3>
-                            <p>Sube algunos archivos .html al directorio para verlos aquí.</p>
-                        </div>
-                    `;
-                    return;
-                }
-                
-                // Generar tarjetas para cada archivo
-                filesContainer.innerHTML = htmlFiles.map(file => `
-                    <a href="${file.url}" class="file-card" data-filename="${file.name}">
-                        <div class="file-icon">📄</div>
-                        <div class="file-name">${file.displayName}</div>
-                        <div class="file-info">
-                            Archivo: <strong>${file.name}</strong>
-                        </div>
-                        <div class="file-size">HTML Document</div>
-                    </a>
-                `).join('');
-                
-                // Actualizar estadísticas
-                statsElement.innerHTML = `
-                    📊 Se encontraron <strong>${htmlFiles.length}</strong> archivos HTML |
-                    📅 Actualizado: ${new Date().toLocaleString()}
-                `;
-                
-            } catch (error) {
-                console.error('Error loading files:', error);
-                filesContainer.innerHTML = `
-                    <div class="no-files">
-                        <div style="font-size: 4em; margin-bottom: 20px;">❌</div>
-                        <h3>Error al cargar archivos</h3>
-                        <p>No se pudieron cargar los archivos del directorio.</p>
-                        <p><small>Error: ${error.message}</small></p>
-                    </div>
-                `;
-            }
-        }
-
-        // Función para filtrar archivos en la búsqueda
         function filterFiles() {
             const searchTerm = document.getElementById('searchInput').value.toLowerCase();
             const fileCards = document.querySelectorAll('.file-card');
             
             fileCards.forEach(card => {
                 const filename = card.getAttribute('data-filename').toLowerCase();
-                const displayName = card.querySelector('.file-name').textContent.toLowerCase();
+                const title = card.querySelector('.file-title').textContent.toLowerCase();
                 
-                if (filename.includes(searchTerm) || displayName.includes(searchTerm)) {
+                if (filename.includes(searchTerm) || title.includes(searchTerm)) {
                     card.style.display = 'block';
                 } else {
                     card.style.display = 'none';
@@ -288,41 +222,9 @@
             });
         }
 
-        // Cargar archivos cuando la página esté lista
         document.addEventListener('DOMContentLoaded', function() {
-            loadHTMLFiles();
-            
-            // Actualizar automáticamente cada 30 segundos
-            setInterval(loadHTMLFiles, 30000);
+            document.getElementById('searchInput').focus();
         });
-
-        // Función para obtener información de un archivo (si es posible)
-        async function getFileInfo(filename) {
-            try {
-                const response = await fetch(filename, { method: 'HEAD' });
-                if (response.ok) {
-                    const size = response.headers.get('content-length');
-                    const lastModified = response.headers.get('last-modified');
-                    
-                    return {
-                        size: size ? formatFileSize(size) : 'Desconocido',
-                        lastModified: lastModified ? new Date(lastModified).toLocaleDateString() : 'Desconocido'
-                    };
-                }
-            } catch (error) {
-                console.log('No se pudo obtener info del archivo:', filename);
-            }
-            return { size: 'Desconocido', lastModified: 'Desconocido' };
-        }
-
-        // Formatear tamaño de archivo
-        function formatFileSize(bytes) {
-            if (bytes === 0) return '0 Bytes';
-            const k = 1024;
-            const sizes = ['Bytes', 'KB', 'MB', 'GB'];
-            const i = Math.floor(Math.log(bytes) / Math.log(k));
-            return parseFloat((bytes / Math.pow(k, i)).toFixed(2)) + ' ' + sizes[i];
-        }
     </script>
 </body>
 </html>
