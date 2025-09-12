@@ -20,6 +20,7 @@
             display: flex;
             align-items: center;
             justify-content: space-between;
+            margin-bottom: 20px;
         }
 
         header h1 {
@@ -64,6 +65,14 @@
             margin: 10px 0;
         }
 
+        #last-update {
+            text-align: right;
+            font-style: italic;
+            color: #666;
+            margin: 5px 0;
+            font-size: 0.9em;
+        }
+
         /* Botón de actualizar */
         .refresh-btn {
             background: #4facfe;
@@ -77,10 +86,15 @@
             margin: 20px 0;
             display: block;
             margin: 20px auto;
+            transition: background-color 0.3s ease;
         }
 
         .refresh-btn:hover {
             background: #329af0;
+        }
+
+        .refresh-btn:active {
+            transform: translateY(1px);
         }
     </style>
 </head>
@@ -94,8 +108,9 @@
     </header>
 
     <div id="datetime"></div>
+    <div id="last-update"></div>
 
-    <button class="refresh-btn" onclick="location.reload()">🔄 Actualitzar Dades</button>
+    <button class="refresh-btn" onclick="actualizarWeb()">🔄 Actualitzar Dades</button>
 
     <h3 id="classificacio_dorsal">CLASSIFICACIÓ GENERAL</h3>
     
@@ -295,7 +310,7 @@ window.addEventListener('load', function() {
 
 
     <script type="text/javascript">
-        // Función para actualizar la fecha y hora
+        // Función para actualizar la fecha y hora actual
         function updateDateTime() {
             const now = new Date();
             const options = {
@@ -308,13 +323,64 @@ window.addEventListener('load', function() {
                 second: "2-digit"
             };
             document.getElementById("datetime").textContent =
-                now.toLocaleDateString("ca-ES", options);
+                "Data i hora actual: " + now.toLocaleDateString("ca-ES", options);
         }
 
-        // Actualizar al cargar
-        updateDateTime();
-        // Refrescar cada 30 segundos
-        setInterval(updateDateTime, 30000);
+        // Función para actualizar la última actualización
+        function updateLastUpdate() {
+            const now = new Date();
+            const options = {
+                year: "numeric",
+                month: "2-digit",
+                day: "2-digit",
+                hour: "2-digit",
+                minute: "2-digit",
+                second: "2-digit"
+            };
+            const lastUpdate = "Última actualització: " + now.toLocaleDateString("ca-ES", options);
+            document.getElementById("last-update").textContent = lastUpdate;
+            
+            // Guardar en localStorage para persistencia
+            localStorage.setItem('lastUpdate', lastUpdate);
+        }
+
+        // Función para cargar la última actualización guardada
+        function loadLastUpdate() {
+            const savedUpdate = localStorage.getItem('lastUpdate');
+            if (savedUpdate) {
+                document.getElementById("last-update").textContent = savedUpdate;
+            } else {
+                // Si no hay última actualización guardada, usar la actual
+                updateLastUpdate();
+            }
+        }
+
+        // Función para actualizar toda la web
+        function actualizarWeb() {
+            // Mostrar mensaje de carga
+            const lastUpdateElement = document.getElementById("last-update");
+            lastUpdateElement.textContent = "🔄 Actualitzant...";
+            lastUpdateElement.style.color = "#4facfe";
+            
+            // Simular un pequeño delay para la actualización
+            setTimeout(function() {
+                // Actualizar la fecha de última actualización
+                updateLastUpdate();
+                lastUpdateElement.style.color = "#666";
+                
+                // Recargar la página
+                location.reload();
+            }, 1000);
+        }
+
+        // Actualizar al cargar la página
+        document.addEventListener('DOMContentLoaded', function() {
+            updateDateTime();
+            loadLastUpdate();
+            
+            // Refrescar cada 30 segundos
+            setInterval(updateDateTime, 30000);
+        });
     </script>
 
 </body>
