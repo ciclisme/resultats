@@ -127,6 +127,7 @@
         <button class="tablink active" onclick="openTab('tab-additional', this)">Darreres Arribades</button>
 
         <button class="tablink" onclick="openTab('tab-all', this)">Scratch</button>
+        <button class="tablink" onclick="openTab('tab-pre_benjamin', this)">Pre Benjamin</button>
         <button class="tablink" onclick="openTab('tab-principiant', this)">Principiant</button>
     </div>
     <div class="tabcontent-container">
@@ -170,6 +171,16 @@
         </tr>
     </thead>
     <tbody>
+        <tr>
+            <td align='right'>70</td>
+            <td>Héctor</td>
+            <td>Rodríguez</td>
+            <td align='right'>1</td>
+            <td>Pre Benjamin</td>
+            <td>20"433</td>
+            <td align='right'>8</td>
+            <td>12:12:11.8616</td>
+        </tr>
         <tr>
             <td align='right'>149</td>
             <td>Noé</td>
@@ -374,6 +385,80 @@
             <td></td>
             <td></td>
         </tr>
+        <tr>
+            <td align='right'>8</td>
+            <td>Héctor</td>
+            <td>Rodríguez</td>
+            <td align='right'>70</td>
+            <td>Pre Benjamin</td>
+            <td align='right'>1</td>
+            <td>20"433</td>
+            <td>20"433</td>
+            <td></td>
+            <td></td>
+        </tr>
+    </tbody>
+</table>        </div>
+        <div id="tab-pre_benjamin" class="tabcontent">
+            <h3>Categoría: Pre Benjamin</h3>
+<table id="tablepre_benjamin" class="sortable-table">
+    <thead>
+        <tr>
+            <th onclick="sortTable('tablepre_benjamin', 0)" style="cursor: pointer;">
+                Clas
+                <span style="margin-left: 5px;">↕️</span>
+            </th>
+            <th onclick="sortTable('tablepre_benjamin', 1)" style="cursor: pointer;">
+                Nom
+                <span style="margin-left: 5px;">↕️</span>
+            </th>
+            <th onclick="sortTable('tablepre_benjamin', 2)" style="cursor: pointer;">
+                Cognom
+                <span style="margin-left: 5px;">↕️</span>
+            </th>
+            <th onclick="sortTable('tablepre_benjamin', 3)" style="cursor: pointer;">
+                Dorsal
+                <span style="margin-left: 5px;">↕️</span>
+            </th>
+            <th onclick="sortTable('tablepre_benjamin', 4)" style="cursor: pointer;">
+                Categoria
+                <span style="margin-left: 5px;">↕️</span>
+            </th>
+            <th onclick="sortTable('tablepre_benjamin', 5)" style="cursor: pointer;">
+                Clas. Categ.
+                <span style="margin-left: 5px;">↕️</span>
+            </th>
+            <th onclick="sortTable('tablepre_benjamin', 6)" style="cursor: pointer;">
+                Temps Final
+                <span style="margin-left: 5px;">↕️</span>
+            </th>
+            <th onclick="sortTable('tablepre_benjamin', 7)" style="cursor: pointer;">
+                Maniga 1
+                <span style="margin-left: 5px;">↕️</span>
+            </th>
+            <th onclick="sortTable('tablepre_benjamin', 8)" style="cursor: pointer;">
+                Maniga 2
+                <span style="margin-left: 5px;">↕️</span>
+            </th>
+            <th onclick="sortTable('tablepre_benjamin', 9)" style="cursor: pointer;">
+                Maniga 3
+                <span style="margin-left: 5px;">↕️</span>
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td align='right'>8</td>
+            <td>Héctor</td>
+            <td>Rodríguez</td>
+            <td align='right'>70</td>
+            <td>Pre Benjamin</td>
+            <td align='right'>1</td>
+            <td>20"433</td>
+            <td>20"433</td>
+            <td></td>
+            <td></td>
+        </tr>
     </tbody>
 </table>        </div>
         <div id="tab-principiant" class="tabcontent">
@@ -515,8 +600,8 @@
 
 <script>
 // Datos para las tablas
-const allData = [[1, "Nil", "Marin", 11, "Principiant", 1, "14\"712", "14\"712", "", ""], [2, "Abel", "Recordà", 119, "Principiant", 2, "15\"283", "15\"283", "", ""], [3, "Noé", "Blazquez", 149, "Principiant", 3, "15\"817", "15\"817", "", ""], [4, "Èric", "Carulla", 83, "Principiant", 4, "15\"925", "15\"925", "", ""], [5, "Axel", "Rojas", 81, "Principiant", 5, "16\"453", "16\"453", "", ""], [6, "Joel", "Duarte", 76, "Principiant", 6, "16\"849", "16\"849", "", ""], [7, "Alan", "Pérez", 79, "Principiant", 7, "16\"892", "16\"892", "", ""]];
-const categorias = ["Principiant"];
+const allData = [[1, "Nil", "Marin", 11, "Principiant", 1, "14\"712", "14\"712", "", ""], [2, "Abel", "Recordà", 119, "Principiant", 2, "15\"283", "15\"283", "", ""], [3, "Noé", "Blazquez", 149, "Principiant", 3, "15\"817", "15\"817", "", ""], [4, "Èric", "Carulla", 83, "Principiant", 4, "15\"925", "15\"925", "", ""], [5, "Axel", "Rojas", 81, "Principiant", 5, "16\"453", "16\"453", "", ""], [6, "Joel", "Duarte", 76, "Principiant", 6, "16\"849", "16\"849", "", ""], [7, "Alan", "Pérez", 79, "Principiant", 7, "16\"892", "16\"892", "", ""], [8, "Héctor", "Rodríguez", 70, "Pre Benjamin", 1, "20\"433", "20\"433", "", ""]];
+const categorias = ["Pre Benjamin", "Principiant"];
 
 // Función para cambiar pestañas
 function openTab(tabName, element) {
