@@ -175,6 +175,16 @@
     </thead>
     <tbody>
         <tr>
+            <td align='right'>54</td>
+            <td>Albert</td>
+            <td>Oto</td>
+            <td align='right'>8</td>
+            <td>Master 40</td>
+            <td>18"998</td>
+            <td align='right'>20</td>
+            <td>13:18:51.1883</td>
+        </tr>
+        <tr>
             <td align='right'>55</td>
             <td>Isaac</td>
             <td>Ledesma</td>
@@ -642,6 +652,18 @@
             <td></td>
             <td></td>
         </tr>
+        <tr>
+            <td align='right'>20</td>
+            <td>Albert</td>
+            <td>Oto</td>
+            <td align='right'>54</td>
+            <td>Master 40</td>
+            <td align='right'>8</td>
+            <td>18"998</td>
+            <td>18"998</td>
+            <td></td>
+            <td></td>
+        </tr>
     </tbody>
 </table>        </div>
         <div id="tab-cadet" class="tabcontent">
@@ -1046,6 +1068,18 @@
             <td></td>
             <td></td>
         </tr>
+        <tr>
+            <td align='right'>20</td>
+            <td>Albert</td>
+            <td>Oto</td>
+            <td align='right'>54</td>
+            <td>Master 40</td>
+            <td align='right'>8</td>
+            <td>18"998</td>
+            <td>18"998</td>
+            <td></td>
+            <td></td>
+        </tr>
     </tbody>
 </table>        </div>
         <div id="tab-master_50" class="tabcontent">
@@ -1127,7 +1161,7 @@
 
 <script>
 // Datos para las tablas
-const allData = [[1, "Albert", "Sala", 40, "Infantil", 1, "12\"755", "12\"755", "", ""], [2, "David", "Montoto", 25, "Cadet", 1, "13\"007", "13\"007", "", ""], [3, "Gonzalo", "Montoto", 23, "Cadet", 2, "13\"191", "13\"191", "", ""], [4, "Bogdan Tudor", "Birtas", 44, "Infantil", 2, "13\"446", "13\"446", "", ""], [5, "Marc", "Farre", 24, "Cadet", 3, "13\"508", "13\"508", "", ""], [6, "Roger", "Del Corral", 27, "Cadet", 4, "13\"660", "13\"660", "", ""], [7, "Aisac", "Boldú", 45, "Infantil", 3, "14\"183", "14\"183", "", ""], [8, "Sergio", "De La Cruz", 56, "Master 40", 1, "14\"187", "14\"187", "", ""], [9, "Salvador", "Mora", 62, "Master 40", 2, "14\"498", "14\"498", "", ""], [10, "Eloi", "Ripoll", 46, "Infantil", 4, "14\"918", "14\"918", "", ""], [11, "Berta", "Martinez", 34, "Femina Junior", 1, "14\"970", "14\"970", "", ""], [12, "Josep", "Escayola", 63, "Master 50", 1, "15\"204", "15\"204", "", ""], [13, "David", "Roset", 138, "Infantil", 5, "15\"310", "15\"310", "", ""], [14, "Sergio", "Blazquez", 143, "Master 40", 3, "15\"872", "15\"872", "", ""], [15, "Eduardo", "Perez", 58, "Master 40", 4, "15\"993", "15\"993", "", ""], [16, "Jose Maria", "Rojas De La", 145, "Master 50", 2, "16\"084", "16\"084", "", ""], [17, "Isaac", "Ledesma", 55, "Master 40", 5, "16\"540", "16\"540", "", ""], [18, "Josep Maria", "Cruells", 162, "Master 40", 6, "16\"792", "16\"792", "", ""], [19, "Pedro", "Marin", 112, "Master 40", 7, "17\"234", "17\"234", "", ""]];
+const allData = [[1, "Albert", "Sala", 40, "Infantil", 1, "12\"755", "12\"755", "", ""], [2, "David", "Montoto", 25, "Cadet", 1, "13\"007", "13\"007", "", ""], [3, "Gonzalo", "Montoto", 23, "Cadet", 2, "13\"191", "13\"191", "", ""], [4, "Bogdan Tudor", "Birtas", 44, "Infantil", 2, "13\"446", "13\"446", "", ""], [5, "Marc", "Farre", 24, "Cadet", 3, "13\"508", "13\"508", "", ""], [6, "Roger", "Del Corral", 27, "Cadet", 4, "13\"660", "13\"660", "", ""], [7, "Aisac", "Boldú", 45, "Infantil", 3, "14\"183", "14\"183", "", ""], [8, "Sergio", "De La Cruz", 56, "Master 40", 1, "14\"187", "14\"187", "", ""], [9, "Salvador", "Mora", 62, "Master 40", 2, "14\"498", "14\"498", "", ""], [10, "Eloi", "Ripoll", 46, "Infantil", 4, "14\"918", "14\"918", "", ""], [11, "Berta", "Martinez", 34, "Femina Junior", 1, "14\"970", "14\"970", "", ""], [12, "Josep", "Escayola", 63, "Master 50", 1, "15\"204", "15\"204", "", ""], [13, "David", "Roset", 138, "Infantil", 5, "15\"310", "15\"310", "", ""], [14, "Sergio", "Blazquez", 143, "Master 40", 3, "15\"872", "15\"872", "", ""], [15, "Eduardo", "Perez", 58, "Master 40", 4, "15\"993", "15\"993", "", ""], [16, "Jose Maria", "Rojas De La", 145, "Master 50", 2, "16\"084", "16\"084", "", ""], [17, "Isaac", "Ledesma", 55, "Master 40", 5, "16\"540", "16\"540", "", ""], [18, "Josep Maria", "Cruells", 162, "Master 40", 6, "16\"792", "16\"792", "", ""], [19, "Pedro", "Marin", 112, "Master 40", 7, "17\"234", "17\"234", "", ""], [20, "Albert", "Oto", 54, "Master 40", 8, "18\"998", "18\"998", "", ""]];
 const categorias = ["Cadet", "Femina Junior", "Infantil", "Master 40", "Master 50"];
 
 // Función para cambiar pestañas
