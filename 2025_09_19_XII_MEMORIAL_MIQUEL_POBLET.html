@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="ca">
+
+<head>
+    <meta charset="utf-8" http-equiv="refresh" content="30">
+    <title>Classificació XII MEMORIAL MIQUEL POBLET</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        /* Cabecera con logos y título centrado */
+        header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 20px;
+        }
+
+        header h1 {
+            flex: 1;
+            text-align: center;
+            margin: 0;
+        }
+
+        /* Estilo para todos los párrafos */
+        p {
+            text-indent: 1.5em;
+        }
+
+        table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        table th {
+            background-color: #0920eb;
+            color: white;
+        }
+
+        table tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+
+        table tr:nth-child(odd) {
+            background-color: #45daf5;
+        }
+
+        table th,
+        table td {
+            padding: 8px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+
+        #datetime {
+            text-align: right;
+            font-weight: bold;
+            margin: 10px 0;
+        }
+
+        #last-update {
+            text-align: right;
+            font-style: italic;
+            color: #666;
+            margin: 5px 0;
+            font-size: 0.9em;
+        }
+
+        /* Botón de actualizar */
+        .refresh-btn {
+            background: #4facfe;
+            color: white;
+            border: none;
+            padding: 12px 24px;
+            border-radius: 25px;
+            cursor: pointer;
+            font-size: 16px;
+            font-weight: bold;
+            margin: 20px 0;
+            display: block;
+            margin: 20px auto;
+            transition: background-color 0.3s ease;
+        }
+
+        .refresh-btn:hover {
+            background: #329af0;
+        }
+
+        .refresh-btn:active {
+            transform: translateY(1px);
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <img width="120" alt="Logo FCC" src="logo_fcc.png" />
+        <h1>Classificació XII MEMORIAL MIQUEL POBLET</h1>
+        <img width="120" alt="Logo CTA" src="logo_cta.jpg" />
+    </header>
+
+    <div id="datetime"></div>
+    <div id="last-update"></div>
+
+    <button class="refresh-btn" onclick="actualizarWeb()">🔄 Actualitzar Dades</button>
+
+    <h3 id="classificacio_dorsal">CLASSIFICACIÓ GENERAL</h3>
+    
+<div style="margin: 20px 0;">
+    <!-- Controles de búsqueda -->
+    <div style="margin-bottom: 15px;">
+        <input type="text" id="globalSearch" onkeyup="filterAllTables()" 
+               placeholder="Buscar en todas las tablas..." 
+               style="padding: 10px; width: 300px; border: 2px solid #ddd; border-radius: 5px; margin-right: 10px;">
+    </div>
+    
+    <!-- Navegación de pestañas -->
+    <div class="tabs">
+        <button class="tablink active" onclick="openTab('tab-additional', this)">Darreres Arribades</button>
+
+        <button class="tablink" onclick="openTab('tab-all', this)">Scratch</button>
+    </div>
+    <div class="tabcontent-container">
+        <div id="tab-additional" class="tabcontent">
+            <h3>Darreres Arribades - Maniga 1 </h3>
+<p>No hay datos adicionales disponibles.</p>        </div>
+        <div id="tab-all" class="tabcontent" style="display:block;">
+            <h3>Tots els Participants</h3>
+<p>No hay datos disponibles</p>        </div>
+    </div>
+</div>
+
+<script>
+// Datos para las tablas
+const allData = [];
+const categorias = [];
+
+// Función para cambiar pestañas
+function openTab(tabName, element) {
+    // Ocultar todos los contenidos de pestañas
+    const tabcontents = document.getElementsByClassName("tabcontent");
+    for (let i = 0; i < tabcontents.length; i++) {
+        tabcontents[i].style.display = "none";
+    }
+    
+    // Desactivar todos los botones
+    const tablinks = document.getElementsByClassName("tablink");
+    for (let i = 0; i < tablinks.length; i++) {
+        tablinks[i].classList.remove("active");
+    }
+    
+    // Mostrar la pestaña seleccionada y activar el botón
+    document.getElementById(tabName).style.display = "block";
+    element.classList.add("active");
+}
+
+// Función para filtrar todas las tablas
+function filterAllTables() {
+    const filter = document.getElementById("globalSearch").value.toLowerCase();
+    const tables = document.querySelectorAll(".sortable-table");
+    
+    tables.forEach(table => {
+        const rows = table.querySelectorAll("tbody tr");
+        rows.forEach(row => {
+            let found = false;
+            const cells = row.querySelectorAll("td");
+            
+            for (let cell of cells) {
+                if (cell.textContent.toLowerCase().includes(filter)) {
+                    found = true;
+                    break;
+                }
+            }
+            
+            row.style.display = found ? "" : "none";
+        });
+    });
+}
+
+// Función de ordenamiento para tablas
+function sortTable(tableId, column) {
+    const table = document.getElementById(tableId);
+    const tbody = table.querySelector("tbody");
+    const rows = Array.from(tbody.querySelectorAll("tr"));
+    const header = table.querySelectorAll("th")[column];
+    
+    const isAscending = header.getAttribute("data-sort") === "asc";
+    header.setAttribute("data-sort", isAscending ? "desc" : "asc");
+    
+    rows.sort((a, b) => {
+        const aValue = a.cells[column].textContent.trim();
+        const bValue = b.cells[column].textContent.trim();
+        
+        const aNum = isNaN(aValue) ? aValue : parseFloat(aValue);
+        const bNum = isNaN(bValue) ? bValue : parseFloat(bValue);
+        
+        if (typeof aNum === 'number' && typeof bNum === 'number') {
+            return isAscending ? aNum - bNum : bNum - aNum;
+        } else {
+            return isAscending ? 
+                aValue.localeCompare(bValue, 'es', { sensitivity: 'base' }) : 
+                bValue.localeCompare(aValue, 'es', { sensitivity: 'base' });
+        }
+    });
+    
+    while (tbody.firstChild) {
+        tbody.removeChild(tbody.firstChild);
+    }
+    
+    rows.forEach(row => tbody.appendChild(row));
+    
+    // Actualizar indicadores
+    table.querySelectorAll("th").forEach(th => {
+        th.querySelector("span").textContent = "↕️";
+    });
+    header.querySelector("span").textContent = isAscending ? "⬇️" : "⬆️";
+}
+
+// Inicializar primera pestaña como activa
+window.addEventListener('load', function() {
+    document.querySelector('.tablink.active').click();
+});
+</script>
+
+<style>
+/* Estilos para pestañas */
+.tabs {
+    border-bottom: 2px solid #667eea;
+    margin-bottom: 20px;
+}
+
+.tablink {
+    background-color: #f8f9fa;
+    border: none;
+    padding: 12px 20px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-right: 5px;
+    border-radius: 5px 5px 0 0;
+    transition: all 0.3s ease;
+}
+
+.tablink:hover {
+    background-color: #e9ecef;
+}
+
+.tablink.active {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    font-weight: bold;
+}
+
+.tabcontent-container {
+    border: 1px solid #ddd;
+    border-top: none;
+    padding: 20px;
+    border-radius: 0 0 5px 5px;
+}
+
+.tabcontent {
+    animation: fadeEffect 0.5s;
+}
+
+@keyframes fadeEffect {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
+/* Estilos para tablas */
+.sortable-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+}
+
+.sortable-table th {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    padding: 12px;
+    text-align: left;
+    cursor: pointer;
+    position: relative;
+}
+
+.sortable-table th:hover {
+    background: linear-gradient(135deg, #5a67d8 0%, #6b46c1 100%);
+}
+
+.sortable-table td {
+    padding: 8px;
+    border-bottom: 1px solid #ddd;
+}
+
+.sortable-table tr:nth-child(even) {
+    background-color: #f8f9fa;
+}
+
+.sortable-table tr:hover {
+    background-color: #e9ecef;
+}
+</style>
+
+
+    <script type="text/javascript">
+        // Función para actualizar la fecha y hora actual
+        function updateDateTime() {
+            const now = new Date();
+            const options = {
+                weekday: "long",
+                year: "numeric",
+                month: "long",
+                day: "numeric",
+                hour: "2-digit",
+                minute: "2-digit",
+                second: "2-digit"
+            };
+            document.getElementById("datetime").textContent =
+                "Data i hora actual: " + now.toLocaleDateString("ca-ES", options);
+        }
+
+        // Función para actualizar la última actualización
+        function updateLastUpdate() {
+            const now = new Date();
+            const options = {
+                year: "numeric",
+                month: "2-digit",
+                day: "2-digit",
+                hour: "2-digit",
+                minute: "2-digit",
+                second: "2-digit"
+            };
+            const lastUpdate = "Última actualització: " + now.toLocaleDateString("ca-ES", options);
+            document.getElementById("last-update").textContent = lastUpdate;
+            
+            // Guardar en localStorage para persistencia
+            localStorage.setItem('lastUpdate', lastUpdate);
+        }
+
+        // Función para cargar la última actualización guardada
+        function loadLastUpdate() {
+            const savedUpdate = localStorage.getItem('lastUpdate');
+            if (savedUpdate) {
+                document.getElementById("last-update").textContent = savedUpdate;
+            } else {
+                // Si no hay última actualización guardada, usar la actual
+                updateLastUpdate();
+            }
+        }
+
+        // Función para actualizar toda la web
+        function actualizarWeb() {
+            // Mostrar mensaje de carga
+            const lastUpdateElement = document.getElementById("last-update");
+            lastUpdateElement.textContent = "🔄 Actualitzant...";
+            lastUpdateElement.style.color = "#4facfe";
+            
+            // Simular un pequeño delay para la actualización
+            setTimeout(function() {
+                // Actualizar la fecha de última actualización
+                updateLastUpdate();
+                lastUpdateElement.style.color = "#666";
+                
+                // Recargar la página
+                location.reload();
+            }, 1000);
+        }
+
+        // Actualizar al cargar la página
+        document.addEventListener('DOMContentLoaded', function() {
+            updateDateTime();
+            loadLastUpdate();
+            
+            // Refrescar cada 30 segundos
+            setInterval(updateDateTime, 30000);
+        });
+    </script>
+
+</body>
+
+</html>
