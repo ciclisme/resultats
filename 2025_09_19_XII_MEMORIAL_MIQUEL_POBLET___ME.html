@@ -131,16 +131,109 @@
     <div class="tabcontent-container">
         <div id="tab-additional" class="tabcontent">
             <h3>Darreres Arribades - Maniga 1 </h3>
-<p>No hay datos adicionales disponibles.</p>        </div>
+<table id="tableAdditional" class="sortable-table">
+    <thead>
+        <tr>
+            <th onclick="sortTable('tableAdditional', 0)" style="cursor: pointer;">
+                Dorsal
+                <span style="margin-left: 5px;">↕️</span>
+            </th>
+            <th onclick="sortTable('tableAdditional', 1)" style="cursor: pointer;">
+                Nom
+                <span style="margin-left: 5px;">↕️</span>
+            </th>
+            <th onclick="sortTable('tableAdditional', 2)" style="cursor: pointer;">
+                Cognom
+                <span style="margin-left: 5px;">↕️</span>
+            </th>
+            <th onclick="sortTable('tableAdditional', 3)" style="cursor: pointer;">
+                Clas_Categ
+                <span style="margin-left: 5px;">↕️</span>
+            </th>
+            <th onclick="sortTable('tableAdditional', 4)" style="cursor: pointer;">
+                Categoria
+                <span style="margin-left: 5px;">↕️</span>
+            </th>
+            <th onclick="sortTable('tableAdditional', 5)" style="cursor: pointer;">
+                Temps Maniga
+                <span style="margin-left: 5px;">↕️</span>
+            </th>
+            <th onclick="sortTable('tableAdditional', 6)" style="cursor: pointer;">
+                Clas Scratch
+                <span style="margin-left: 5px;">↕️</span>
+            </th>
+            <th onclick="sortTable('tableAdditional', 7)" style="cursor: pointer;">
+                Hora
+                <span style="margin-left: 5px;">↕️</span>
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td align='right'>21</td>
+            <td>Lyonnet</td>
+            <td>Maxence</td>
+            <td align='right'>1</td>
+            <td></td>
+            <td>11"957</td>
+            <td align='right'>1</td>
+            <td>17:19:25.5271</td>
+        </tr>
+    </tbody>
+</table>        </div>
         <div id="tab-all" class="tabcontent" style="display:block;">
             <h3>Tots els Participants</h3>
-<p>No hay datos disponibles</p>        </div>
+<table id="tableAll" class="sortable-table">
+    <thead>
+        <tr>
+            <th onclick="sortTable('tableAll', 0)" style="cursor: pointer;">
+                Clas
+                <span style="margin-left: 5px;">↕️</span>
+            </th>
+            <th onclick="sortTable('tableAll', 1)" style="cursor: pointer;">
+                Dorsal
+                <span style="margin-left: 5px;">↕️</span>
+            </th>
+            <th onclick="sortTable('tableAll', 2)" style="cursor: pointer;">
+                Nom
+                <span style="margin-left: 5px;">↕️</span>
+            </th>
+            <th onclick="sortTable('tableAll', 3)" style="cursor: pointer;">
+                Cognom
+                <span style="margin-left: 5px;">↕️</span>
+            </th>
+            <th onclick="sortTable('tableAll', 4)" style="cursor: pointer;">
+                Categoria
+                <span style="margin-left: 5px;">↕️</span>
+            </th>
+            <th onclick="sortTable('tableAll', 5)" style="cursor: pointer;">
+                Clas Categ
+                <span style="margin-left: 5px;">↕️</span>
+            </th>
+            <th onclick="sortTable('tableAll', 6)" style="cursor: pointer;">
+                Temps Final
+                <span style="margin-left: 5px;">↕️</span>
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td align='right'>1</td>
+            <td align='right'>21</td>
+            <td>Lyonnet</td>
+            <td>Maxence</td>
+            <td></td>
+            <td align='right'>1</td>
+            <td>11"957</td>
+        </tr>
+    </tbody>
+</table>        </div>
     </div>
 </div>
 
 <script>
 // Datos para las tablas
-const allData = [];
+const allData = [[1, 21, "Lyonnet", "Maxence", "", 1, "11\"957"]];
 const categorias = [];
 
 // Función para cambiar pestañas
