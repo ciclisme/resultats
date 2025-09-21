@@ -139,7 +139,56 @@
     <div class="tabcontent-container">
         <div id="tab-additional" class="tabcontent">
             <h3>Darreres Arribades - Maniga 2 </h3>
-<p>No hay datos adicionales disponibles.</p>        </div>
+<table id="tableAdditional" class="sortable-table">
+    <thead>
+        <tr>
+            <th onclick="sortTable('tableAdditional', 0)" style="cursor: pointer;">
+                Dorsal
+                <span style="margin-left: 5px;">↕️</span>
+            </th>
+            <th onclick="sortTable('tableAdditional', 1)" style="cursor: pointer;">
+                Nom
+                <span style="margin-left: 5px;">↕️</span>
+            </th>
+            <th onclick="sortTable('tableAdditional', 2)" style="cursor: pointer;">
+                Cognom
+                <span style="margin-left: 5px;">↕️</span>
+            </th>
+            <th onclick="sortTable('tableAdditional', 3)" style="cursor: pointer;">
+                Clas_Categ
+                <span style="margin-left: 5px;">↕️</span>
+            </th>
+            <th onclick="sortTable('tableAdditional', 4)" style="cursor: pointer;">
+                Categoria
+                <span style="margin-left: 5px;">↕️</span>
+            </th>
+            <th onclick="sortTable('tableAdditional', 5)" style="cursor: pointer;">
+                Temps Maniga
+                <span style="margin-left: 5px;">↕️</span>
+            </th>
+            <th onclick="sortTable('tableAdditional', 6)" style="cursor: pointer;">
+                Clas Scratch
+                <span style="margin-left: 5px;">↕️</span>
+            </th>
+            <th onclick="sortTable('tableAdditional', 7)" style="cursor: pointer;">
+                Hora
+                <span style="margin-left: 5px;">↕️</span>
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td align='right'>35</td>
+            <td>Ona</td>
+            <td>Oto</td>
+            <td align='right'>2</td>
+            <td>Femina Prebenjamin</td>
+            <td>29"966</td>
+            <td align='right'>30</td>
+            <td>10:50:48.2109</td>
+        </tr>
+    </tbody>
+</table>        </div>
         <div id="tab-all" class="tabcontent" style="display:block;">
             <h3>Tots els Participants</h3>
 <table id="tableAll" class="sortable-table">
@@ -521,7 +570,7 @@
             <td align='right'>1</td>
             <td>29"256</td>
             <td>29"256</td>
-            <td></td>
+            <td>29"966</td>
             <td></td>
         </tr>
     </tbody>
@@ -963,7 +1012,7 @@
             <td align='right'>1</td>
             <td>29"256</td>
             <td>29"256</td>
-            <td></td>
+            <td>29"966</td>
             <td></td>
         </tr>
     </tbody>
@@ -1267,7 +1316,7 @@
 
 <script>
 // Datos para las tablas
-const allData = [[1, "Nil", "Marin", 11, "Principiant", 1, "16\"564", "16\"564", "", ""], [2, "Miguel", "Perez", 2, "Alevi", 1, "16\"989", "16\"989", "", ""], [3, "Marti", "Dalmases", 9, "Alevi", 2, "17\"126", "17\"126", "", ""], [4, "Abel", "Recordà", 119, "Principiant", 2, "17\"134", "17\"134", "", ""], [5, "Oriol", "López", 8, "Alevi", 3, "17\"202", "17\"202", "", ""], [6, "Pol", "Perez", 100, "Alevi", 4, "17\"641", "17\"641", "", ""], [7, "Èric", "Carulla", 83, "Principiant", 3, "18\"254", "18\"254", "", ""], [8, "Joel", "Duarte", 76, "Principiant", 4, "18\"400", "18\"400", "", ""], [9, "Leo", "Rodríguez", 20, "Benjami", 1, "18\"700", "18\"700", "", ""], [10, "Irene", "Salguero", 30, "Femina Alevi", 1, "18\"830", "18\"830", "", ""], [11, "Axel", "Rojas", 81, "Principiant", 5, "19\"108", "19\"108", "", ""], [12, "Arià", "Herrera", 173, "Alevi", 5, "19\"255", "19\"255", "", ""], [13, "Roger", "Balcells", 176, "Principiant", 6, "19\"512", "19\"512", "", ""], [14, "Kylian", "Gargallo", 16, "Benjami", 2, "19\"581", "19\"581", "", ""], [15, "Roc", "Oto", 82, "Benjami", 3, "19\"911", "19\"911", "", ""], [16, "Adrià", "Custodi", 180, "Principiant", 7, "20\"006", "20\"006", "", ""], [17, "Ines", "Perez", 37, "Femina Principant", 1, "20\"137", "20\"137", "", ""], [18, "Marc", "Custodi", 179, "Alevi", 6, "20\"443", "20\"443", "", ""], [19, "Chloe", "Torra", 33, "Femina Benjami", 1, "20\"831", "20\"831", "", ""], [20, "Andreu", "Domenech", 147, "Principiant", 8, "20\"839", "20\"839", "", ""], [21, "Axel", "Benito", 152, "Benjami", 4, "20\"902", "20\"902", "", ""], [22, "Ines", "Perez", 101, "Femina Alevi", 2, "22\"914", "22\"914", "", ""], [23, "Ferran", "Domenech", 12, "Benjami", 5, "23\"224", "23\"224", "", ""], [24, "Lluc", "Balcells", 177, "Pre Benjamin", 1, "23\"564", "23\"564", "", ""], [25, "Pol", "Calvo", 155, "Benjami", 6, "23\"986", "23\"986", "", ""], [26, "Anna", "Marin", 113, "Femina Principant", 2, "24\"501", "24\"501", "", ""], [27, "Lucas", "Santacruz Da", 115, "Pre Benjamin", 2, "28\"285", "28\"285", "", ""], [28, "Ona", "Oto", 35, "Femina Prebenjamin", 1, "29\"256", "29\"256", "", ""]];
+const allData = [[1, "Nil", "Marin", 11, "Principiant", 1, "16\"564", "16\"564", "", ""], [2, "Miguel", "Perez", 2, "Alevi", 1, "16\"989", "16\"989", "", ""], [3, "Marti", "Dalmases", 9, "Alevi", 2, "17\"126", "17\"126", "", ""], [4, "Abel", "Recordà", 119, "Principiant", 2, "17\"134", "17\"134", "", ""], [5, "Oriol", "López", 8, "Alevi", 3, "17\"202", "17\"202", "", ""], [6, "Pol", "Perez", 100, "Alevi", 4, "17\"641", "17\"641", "", ""], [7, "Èric", "Carulla", 83, "Principiant", 3, "18\"254", "18\"254", "", ""], [8, "Joel", "Duarte", 76, "Principiant", 4, "18\"400", "18\"400", "", ""], [9, "Leo", "Rodríguez", 20, "Benjami", 1, "18\"700", "18\"700", "", ""], [10, "Irene", "Salguero", 30, "Femina Alevi", 1, "18\"830", "18\"830", "", ""], [11, "Axel", "Rojas", 81, "Principiant", 5, "19\"108", "19\"108", "", ""], [12, "Arià", "Herrera", 173, "Alevi", 5, "19\"255", "19\"255", "", ""], [13, "Roger", "Balcells", 176, "Principiant", 6, "19\"512", "19\"512", "", ""], [14, "Kylian", "Gargallo", 16, "Benjami", 2, "19\"581", "19\"581", "", ""], [15, "Roc", "Oto", 82, "Benjami", 3, "19\"911", "19\"911", "", ""], [16, "Adrià", "Custodi", 180, "Principiant", 7, "20\"006", "20\"006", "", ""], [17, "Ines", "Perez", 37, "Femina Principant", 1, "20\"137", "20\"137", "", ""], [18, "Marc", "Custodi", 179, "Alevi", 6, "20\"443", "20\"443", "", ""], [19, "Chloe", "Torra", 33, "Femina Benjami", 1, "20\"831", "20\"831", "", ""], [20, "Andreu", "Domenech", 147, "Principiant", 8, "20\"839", "20\"839", "", ""], [21, "Axel", "Benito", 152, "Benjami", 4, "20\"902", "20\"902", "", ""], [22, "Ines", "Perez", 101, "Femina Alevi", 2, "22\"914", "22\"914", "", ""], [23, "Ferran", "Domenech", 12, "Benjami", 5, "23\"224", "23\"224", "", ""], [24, "Lluc", "Balcells", 177, "Pre Benjamin", 1, "23\"564", "23\"564", "", ""], [25, "Pol", "Calvo", 155, "Benjami", 6, "23\"986", "23\"986", "", ""], [26, "Anna", "Marin", 113, "Femina Principant", 2, "24\"501", "24\"501", "", ""], [27, "Lucas", "Santacruz Da", 115, "Pre Benjamin", 2, "28\"285", "28\"285", "", ""], [28, "Ona", "Oto", 35, "Femina Prebenjamin", 1, "29\"256", "29\"256", "29\"966", ""]];
 const categorias = ["Alevi", "Benjami", "Femina Alevi", "Femina Benjami", "Femina Prebenjamin", "Femina Principant", "Pre Benjamin", "Principiant"];
 
 // Función para cambiar pestañas
