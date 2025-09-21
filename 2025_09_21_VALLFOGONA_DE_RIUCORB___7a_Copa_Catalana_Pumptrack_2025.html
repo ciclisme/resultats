@@ -127,21 +127,1416 @@
         <button class="tablink active" onclick="openTab('tab-additional', this)">Darreres Arribades</button>
 
         <button class="tablink" onclick="openTab('tab-all', this)">Scratch</button>
+        <button class="tablink" onclick="openTab('tab-cadet', this)">Cadet</button>
+        <button class="tablink" onclick="openTab('tab-elit', this)">Elit</button>
+        <button class="tablink" onclick="openTab('tab-infantil', this)">Infantil</button>
+        <button class="tablink" onclick="openTab('tab-junior', this)">Junior</button>
+        <button class="tablink" onclick="openTab('tab-master_30', this)">Master 30</button>
+        <button class="tablink" onclick="openTab('tab-master_40', this)">Master 40</button>
+        <button class="tablink" onclick="openTab('tab-master_50', this)">Master 50</button>
     </div>
     <div class="tabcontent-container">
         <div id="tab-additional" class="tabcontent">
-            <h3>Darreres Arribades - Maniga 1 </h3>
-<p>No hay datos adicionales disponibles.</p>        </div>
+            <h3>Darreres Arribades - Maniga 3 </h3>
+<table id="tableAdditional" class="sortable-table">
+    <thead>
+        <tr>
+            <th onclick="sortTable('tableAdditional', 0)" style="cursor: pointer;">
+                Dorsal
+                <span style="margin-left: 5px;">↕️</span>
+            </th>
+            <th onclick="sortTable('tableAdditional', 1)" style="cursor: pointer;">
+                Nom
+                <span style="margin-left: 5px;">↕️</span>
+            </th>
+            <th onclick="sortTable('tableAdditional', 2)" style="cursor: pointer;">
+                Cognom
+                <span style="margin-left: 5px;">↕️</span>
+            </th>
+            <th onclick="sortTable('tableAdditional', 3)" style="cursor: pointer;">
+                Clas_Categ
+                <span style="margin-left: 5px;">↕️</span>
+            </th>
+            <th onclick="sortTable('tableAdditional', 4)" style="cursor: pointer;">
+                Categoria
+                <span style="margin-left: 5px;">↕️</span>
+            </th>
+            <th onclick="sortTable('tableAdditional', 5)" style="cursor: pointer;">
+                Temps Maniga
+                <span style="margin-left: 5px;">↕️</span>
+            </th>
+            <th onclick="sortTable('tableAdditional', 6)" style="cursor: pointer;">
+                Clas Scratch
+                <span style="margin-left: 5px;">↕️</span>
+            </th>
+            <th onclick="sortTable('tableAdditional', 7)" style="cursor: pointer;">
+                Hora
+                <span style="margin-left: 5px;">↕️</span>
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td align='right'>28</td>
+            <td>Sergi</td>
+            <td>Coca</td>
+            <td align='right'>3</td>
+            <td>Elit</td>
+            <td>16"188</td>
+            <td align='right'>18</td>
+            <td>12:34:19.5737</td>
+        </tr>
+        <tr>
+            <td align='right'>40</td>
+            <td>Albert</td>
+            <td>Sala</td>
+            <td align='right'>11</td>
+            <td>Infantil</td>
+            <td>17"052</td>
+            <td align='right'>36</td>
+            <td>12:33:48.7239</td>
+        </tr>
+        <tr>
+            <td align='right'>25</td>
+            <td>David</td>
+            <td>Montoto</td>
+            <td align='right'>1</td>
+            <td>Cadet</td>
+            <td>14"860</td>
+            <td align='right'>4</td>
+            <td>12:33:14.9642</td>
+        </tr>
+        <tr>
+            <td align='right'>27</td>
+            <td>Roger</td>
+            <td>Del Corral</td>
+            <td align='right'>4</td>
+            <td>Cadet</td>
+            <td>15"171</td>
+            <td align='right'>8</td>
+            <td>12:32:44.6507</td>
+        </tr>
+        <tr>
+            <td align='right'>23</td>
+            <td>Gonzalo</td>
+            <td>Montoto</td>
+            <td align='right'>7</td>
+            <td>Cadet</td>
+            <td>15"580</td>
+            <td align='right'>11</td>
+            <td>12:32:16.2211</td>
+        </tr>
+        <tr>
+            <td align='right'>44</td>
+            <td>Bogdan Tudor</td>
+            <td>Birtas</td>
+            <td align='right'>3</td>
+            <td>Infantil</td>
+            <td>15"590</td>
+            <td align='right'>12</td>
+            <td>12:31:47.2349</td>
+        </tr>
+        <tr>
+            <td align='right'>52</td>
+            <td>Dani</td>
+            <td>Rubio</td>
+            <td align='right'>1</td>
+            <td>Master 30</td>
+            <td>16"179</td>
+            <td align='right'>17</td>
+            <td>12:31:16.9979</td>
+        </tr>
+        <tr>
+            <td align='right'>88</td>
+            <td>Joan</td>
+            <td>Dalmau</td>
+            <td align='right'>7</td>
+            <td>Elit</td>
+            <td>17"168</td>
+            <td align='right'>37</td>
+            <td>12:30:9.7325</td>
+        </tr>
+        <tr>
+            <td align='right'>45</td>
+            <td>Aisac</td>
+            <td>Boldú</td>
+            <td align='right'>15</td>
+            <td>Infantil</td>
+            <td>18"660</td>
+            <td align='right'>64</td>
+            <td>12:30:43.9931</td>
+        </tr>
+        <tr>
+            <td align='right'>62</td>
+            <td>Salvador</td>
+            <td>Mora</td>
+            <td align='right'>1</td>
+            <td>Master 40</td>
+            <td>16"257</td>
+            <td align='right'>19</td>
+            <td>12:29:31.4707</td>
+        </tr>
+        <tr>
+            <td align='right'>46</td>
+            <td>Eloi</td>
+            <td>Ripoll</td>
+            <td align='right'>9</td>
+            <td>Infantil</td>
+            <td>16"721</td>
+            <td align='right'>29</td>
+            <td>12:28:58.308</td>
+        </tr>
+        <tr>
+            <td align='right'>56</td>
+            <td>Sergio</td>
+            <td>De La Cruz</td>
+            <td align='right'>6</td>
+            <td>Master 40</td>
+            <td>17"197</td>
+            <td align='right'>38</td>
+            <td>12:28:25.2528</td>
+        </tr>
+        <tr>
+            <td align='right'>50</td>
+            <td>Víctor</td>
+            <td>Marín</td>
+            <td align='right'>13</td>
+            <td>Master 30</td>
+            <td>18"335</td>
+            <td align='right'>56</td>
+            <td>12:27:52.6167</td>
+        </tr>
+        <tr>
+            <td align='right'>29</td>
+            <td>Daniel</td>
+            <td>Vargas</td>
+            <td align='right'>9</td>
+            <td>Elit</td>
+            <td>17"525</td>
+            <td align='right'>43</td>
+            <td>12:27:20.4678</td>
+        </tr>
+        <tr>
+            <td align='right'>138</td>
+            <td>David</td>
+            <td>Roset</td>
+            <td align='right'>12</td>
+            <td>Infantil</td>
+            <td>17"378</td>
+            <td align='right'>40</td>
+            <td>12:26:47.2059</td>
+        </tr>
+        <tr>
+            <td align='right'>51</td>
+            <td>Robert</td>
+            <td>Bagés</td>
+            <td align='right'>8</td>
+            <td>Master 30</td>
+            <td>17"767</td>
+            <td align='right'>46</td>
+            <td>12:26:13.231</td>
+        </tr>
+        <tr>
+            <td align='right'>94</td>
+            <td>Jordi</td>
+            <td>Perez</td>
+            <td align='right'>7</td>
+            <td>Master 40</td>
+            <td>18"108</td>
+            <td align='right'>50</td>
+            <td>12:25:9.5226</td>
+        </tr>
+        <tr>
+            <td align='right'>175</td>
+            <td>Marc</td>
+            <td>Balcells</td>
+            <td align='right'>9</td>
+            <td>Master 30</td>
+            <td>17"835</td>
+            <td align='right'>47</td>
+            <td>12:25:42.5515</td>
+        </tr>
+        <tr>
+            <td align='right'>141</td>
+            <td>Gerard</td>
+            <td>Dalmases</td>
+            <td align='right'>18</td>
+            <td>Master 30</td>
+            <td>18"799</td>
+            <td align='right'>66</td>
+            <td>12:24:6.3723</td>
+        </tr>
+        <tr>
+            <td align='right'>26</td>
+            <td>Ruben</td>
+            <td>Doblas</td>
+            <td align='right'>11</td>
+            <td>Cadet</td>
+            <td>18"377</td>
+            <td align='right'>57</td>
+            <td>12:24:37.6277</td>
+        </tr>
+        <tr>
+            <td align='right'>63</td>
+            <td>Josep</td>
+            <td>Escayola</td>
+            <td align='right'>2</td>
+            <td>Master 50</td>
+            <td>18"201</td>
+            <td align='right'>51</td>
+            <td>12:23:00.436</td>
+        </tr>
+        <tr>
+            <td align='right'>178</td>
+            <td>Arnau</td>
+            <td>Custodi</td>
+            <td align='right'>11</td>
+            <td>Master 30</td>
+            <td>18"244</td>
+            <td align='right'>52</td>
+            <td>12:22:26.415</td>
+        </tr>
+        <tr>
+            <td align='right'>114</td>
+            <td>Rodrigo</td>
+            <td>Santacruz</td>
+            <td align='right'>19</td>
+            <td>Master 30</td>
+            <td>18"920</td>
+            <td align='right'>67</td>
+            <td>12:21:52.6342</td>
+        </tr>
+        <tr>
+            <td align='right'>90</td>
+            <td>Inocencio</td>
+            <td>Perez</td>
+            <td align='right'>4</td>
+            <td>Master 50</td>
+            <td>18"965</td>
+            <td align='right'>68</td>
+            <td>12:21:19.7326</td>
+        </tr>
+        <tr>
+            <td align='right'>145</td>
+            <td>Jose Maria</td>
+            <td>Rojas De La</td>
+            <td align='right'>9</td>
+            <td>Master 50</td>
+            <td>19"695</td>
+            <td align='right'>77</td>
+            <td>12:20:46.0632</td>
+        </tr>
+        <tr>
+            <td align='right'>112</td>
+            <td>Pedro</td>
+            <td>Marin</td>
+            <td align='right'>11</td>
+            <td>Master 40</td>
+            <td>19"132</td>
+            <td align='right'>71</td>
+            <td>12:20:11.6438</td>
+        </tr>
+        <tr>
+            <td align='right'>47</td>
+            <td>Randy</td>
+            <td>Salmeron</td>
+            <td align='right'>1</td>
+            <td>Junior</td>
+            <td>20"300</td>
+            <td align='right'>79</td>
+            <td>12:19:37.4085</td>
+        </tr>
+        <tr>
+            <td align='right'>54</td>
+            <td>Albert</td>
+            <td>Oto</td>
+            <td align='right'>13</td>
+            <td>Master 40</td>
+            <td>22"799</td>
+            <td align='right'>82</td>
+            <td>12:19:3.2641</td>
+        </tr>
+    </tbody>
+</table>        </div>
         <div id="tab-all" class="tabcontent" style="display:block;">
             <h3>Tots els Participants</h3>
-<p>No hay datos disponibles</p>        </div>
+<table id="tableAll" class="sortable-table">
+    <thead>
+        <tr>
+            <th onclick="sortTable('tableAll', 0)" style="cursor: pointer;">
+                Clas
+                <span style="margin-left: 5px;">↕️</span>
+            </th>
+            <th onclick="sortTable('tableAll', 1)" style="cursor: pointer;">
+                Nom
+                <span style="margin-left: 5px;">↕️</span>
+            </th>
+            <th onclick="sortTable('tableAll', 2)" style="cursor: pointer;">
+                Cognom
+                <span style="margin-left: 5px;">↕️</span>
+            </th>
+            <th onclick="sortTable('tableAll', 3)" style="cursor: pointer;">
+                Dorsal
+                <span style="margin-left: 5px;">↕️</span>
+            </th>
+            <th onclick="sortTable('tableAll', 4)" style="cursor: pointer;">
+                Categoria
+                <span style="margin-left: 5px;">↕️</span>
+            </th>
+            <th onclick="sortTable('tableAll', 5)" style="cursor: pointer;">
+                Clas. Categ.
+                <span style="margin-left: 5px;">↕️</span>
+            </th>
+            <th onclick="sortTable('tableAll', 6)" style="cursor: pointer;">
+                Temps Final
+                <span style="margin-left: 5px;">↕️</span>
+            </th>
+            <th onclick="sortTable('tableAll', 7)" style="cursor: pointer;">
+                Maniga 1
+                <span style="margin-left: 5px;">↕️</span>
+            </th>
+            <th onclick="sortTable('tableAll', 8)" style="cursor: pointer;">
+                Maniga 2
+                <span style="margin-left: 5px;">↕️</span>
+            </th>
+            <th onclick="sortTable('tableAll', 9)" style="cursor: pointer;">
+                Maniga 3
+                <span style="margin-left: 5px;">↕️</span>
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td align='right'>1</td>
+            <td>Sergi</td>
+            <td>Coca</td>
+            <td align='right'>28</td>
+            <td>Elit</td>
+            <td align='right'>1</td>
+            <td>14"426</td>
+            <td>14"646</td>
+            <td>14"426</td>
+            <td>16"188</td>
+        </tr>
+        <tr>
+            <td align='right'>2</td>
+            <td>Albert</td>
+            <td>Sala</td>
+            <td align='right'>40</td>
+            <td>Infantil</td>
+            <td align='right'>1</td>
+            <td>14"806</td>
+            <td>14"899</td>
+            <td>14"806</td>
+            <td>17"052</td>
+        </tr>
+        <tr>
+            <td align='right'>3</td>
+            <td>David</td>
+            <td>Montoto</td>
+            <td align='right'>25</td>
+            <td>Cadet</td>
+            <td align='right'>1</td>
+            <td>14"860</td>
+            <td>15"078</td>
+            <td>15"078</td>
+            <td>14"860</td>
+        </tr>
+        <tr>
+            <td align='right'>4</td>
+            <td>Roger</td>
+            <td>Del Corral</td>
+            <td align='right'>27</td>
+            <td>Cadet</td>
+            <td align='right'>2</td>
+            <td>15"171</td>
+            <td>15"328</td>
+            <td>15"310</td>
+            <td>15"171</td>
+        </tr>
+        <tr>
+            <td align='right'>5</td>
+            <td>Gonzalo</td>
+            <td>Montoto</td>
+            <td align='right'>23</td>
+            <td>Cadet</td>
+            <td align='right'>3</td>
+            <td>15"580</td>
+            <td>16"107</td>
+            <td>15"686</td>
+            <td>15"580</td>
+        </tr>
+        <tr>
+            <td align='right'>6</td>
+            <td>Bogdan Tudor</td>
+            <td>Birtas</td>
+            <td align='right'>44</td>
+            <td>Infantil</td>
+            <td align='right'>2</td>
+            <td>15"590</td>
+            <td>15"770</td>
+            <td>15"845</td>
+            <td>15"590</td>
+        </tr>
+        <tr>
+            <td align='right'>7</td>
+            <td>Dani</td>
+            <td>Rubio</td>
+            <td align='right'>52</td>
+            <td>Master 30</td>
+            <td align='right'>1</td>
+            <td>16"179</td>
+            <td>16"345</td>
+            <td>16"397</td>
+            <td>16"179</td>
+        </tr>
+        <tr>
+            <td align='right'>8</td>
+            <td>Salvador</td>
+            <td>Mora</td>
+            <td align='right'>62</td>
+            <td>Master 40</td>
+            <td align='right'>1</td>
+            <td>16"257</td>
+            <td>16"447</td>
+            <td>16"831</td>
+            <td>16"257</td>
+        </tr>
+        <tr>
+            <td align='right'>9</td>
+            <td>Aisac</td>
+            <td>Boldú</td>
+            <td align='right'>45</td>
+            <td>Infantil</td>
+            <td align='right'>3</td>
+            <td>16"354</td>
+            <td>16"354</td>
+            <td>16"528</td>
+            <td>18"660</td>
+        </tr>
+        <tr>
+            <td align='right'>10</td>
+            <td>Sergio</td>
+            <td>De La Cruz</td>
+            <td align='right'>56</td>
+            <td>Master 40</td>
+            <td align='right'>2</td>
+            <td>16"437</td>
+            <td>16"437</td>
+            <td>16"886</td>
+            <td>17"197</td>
+        </tr>
+        <tr>
+            <td align='right'>11</td>
+            <td>Eloi</td>
+            <td>Ripoll</td>
+            <td align='right'>46</td>
+            <td>Infantil</td>
+            <td align='right'>4</td>
+            <td>16"465</td>
+            <td>16"465</td>
+            <td>16"845</td>
+            <td>16"721</td>
+        </tr>
+        <tr>
+            <td align='right'>12</td>
+            <td>Daniel</td>
+            <td>Vargas</td>
+            <td align='right'>29</td>
+            <td>Elit</td>
+            <td align='right'>2</td>
+            <td>16"582</td>
+            <td>16"582</td>
+            <td>17"368</td>
+            <td>17"525</td>
+        </tr>
+        <tr>
+            <td align='right'>13</td>
+            <td>Víctor</td>
+            <td>Marín</td>
+            <td align='right'>50</td>
+            <td>Master 30</td>
+            <td align='right'>2</td>
+            <td>16"684</td>
+            <td>16"684</td>
+            <td>17"029</td>
+            <td>18"335</td>
+        </tr>
+        <tr>
+            <td align='right'>14</td>
+            <td>Joan</td>
+            <td>Dalmau</td>
+            <td align='right'>88</td>
+            <td>Elit</td>
+            <td align='right'>3</td>
+            <td>16"738</td>
+            <td>16"754</td>
+            <td>16"738</td>
+            <td>17"168</td>
+        </tr>
+        <tr>
+            <td align='right'>15</td>
+            <td>David</td>
+            <td>Roset</td>
+            <td align='right'>138</td>
+            <td>Infantil</td>
+            <td align='right'>5</td>
+            <td>17"378</td>
+            <td>17"441</td>
+            <td>17"410</td>
+            <td>17"378</td>
+        </tr>
+        <tr>
+            <td align='right'>16</td>
+            <td>Robert</td>
+            <td>Bagés</td>
+            <td align='right'>51</td>
+            <td>Master 30</td>
+            <td align='right'>3</td>
+            <td>17"622</td>
+            <td>17"622</td>
+            <td>17"673</td>
+            <td>17"767</td>
+        </tr>
+        <tr>
+            <td align='right'>17</td>
+            <td>Marc</td>
+            <td>Balcells</td>
+            <td align='right'>175</td>
+            <td>Master 30</td>
+            <td align='right'>4</td>
+            <td>17"835</td>
+            <td>18"302</td>
+            <td>17"999</td>
+            <td>17"835</td>
+        </tr>
+        <tr>
+            <td align='right'>18</td>
+            <td>Josep</td>
+            <td>Escayola</td>
+            <td align='right'>63</td>
+            <td>Master 50</td>
+            <td align='right'>1</td>
+            <td>18"091</td>
+            <td>18"091</td>
+            <td>18"498</td>
+            <td>18"201</td>
+        </tr>
+        <tr>
+            <td align='right'>19</td>
+            <td>Jordi</td>
+            <td>Perez</td>
+            <td align='right'>94</td>
+            <td>Master 40</td>
+            <td align='right'>3</td>
+            <td>18"108</td>
+            <td>18"320</td>
+            <td>18"420</td>
+            <td>18"108</td>
+        </tr>
+        <tr>
+            <td align='right'>20</td>
+            <td>Arnau</td>
+            <td>Custodi</td>
+            <td align='right'>178</td>
+            <td>Master 30</td>
+            <td align='right'>5</td>
+            <td>18"244</td>
+            <td>18"618</td>
+            <td>18"674</td>
+            <td>18"244</td>
+        </tr>
+        <tr>
+            <td align='right'>21</td>
+            <td>Ruben</td>
+            <td>Doblas</td>
+            <td align='right'>26</td>
+            <td>Cadet</td>
+            <td align='right'>4</td>
+            <td>18"290</td>
+            <td>18"290</td>
+            <td>18"462</td>
+            <td>18"377</td>
+        </tr>
+        <tr>
+            <td align='right'>22</td>
+            <td>Gerard</td>
+            <td>Dalmases</td>
+            <td align='right'>141</td>
+            <td>Master 30</td>
+            <td align='right'>6</td>
+            <td>18"477</td>
+            <td>18"505</td>
+            <td>18"477</td>
+            <td>18"799</td>
+        </tr>
+        <tr>
+            <td align='right'>23</td>
+            <td>Rodrigo</td>
+            <td>Santacruz</td>
+            <td align='right'>114</td>
+            <td>Master 30</td>
+            <td align='right'>7</td>
+            <td>18"920</td>
+            <td>19"107</td>
+            <td>19"155</td>
+            <td>18"920</td>
+        </tr>
+        <tr>
+            <td align='right'>24</td>
+            <td>Inocencio</td>
+            <td>Perez</td>
+            <td align='right'>90</td>
+            <td>Master 50</td>
+            <td align='right'>2</td>
+            <td>18"965</td>
+            <td>19"689</td>
+            <td>19"280</td>
+            <td>18"965</td>
+        </tr>
+        <tr>
+            <td align='right'>25</td>
+            <td>Pedro</td>
+            <td>Marin</td>
+            <td align='right'>112</td>
+            <td>Master 40</td>
+            <td align='right'>4</td>
+            <td>18"967</td>
+            <td>18"967</td>
+            <td>19"783</td>
+            <td>19"132</td>
+        </tr>
+        <tr>
+            <td align='right'>26</td>
+            <td>Jose Maria</td>
+            <td>Rojas De La</td>
+            <td align='right'>145</td>
+            <td>Master 50</td>
+            <td align='right'>3</td>
+            <td>19"456</td>
+            <td>19"456</td>
+            <td>19"652</td>
+            <td>19"695</td>
+        </tr>
+        <tr>
+            <td align='right'>27</td>
+            <td>Randy</td>
+            <td>Salmeron</td>
+            <td align='right'>47</td>
+            <td>Junior</td>
+            <td align='right'>1</td>
+            <td>20"300</td>
+            <td>20"649</td>
+            <td>20"509</td>
+            <td>20"300</td>
+        </tr>
+        <tr>
+            <td align='right'>28</td>
+            <td>Albert</td>
+            <td>Oto</td>
+            <td align='right'>54</td>
+            <td>Master 40</td>
+            <td align='right'>5</td>
+            <td>22"799</td>
+            <td>23"037</td>
+            <td>23"466</td>
+            <td>22"799</td>
+        </tr>
+    </tbody>
+</table>        </div>
+        <div id="tab-cadet" class="tabcontent">
+            <h3>Categoría: Cadet</h3>
+<table id="tablecadet" class="sortable-table">
+    <thead>
+        <tr>
+            <th onclick="sortTable('tablecadet', 0)" style="cursor: pointer;">
+                Clas
+                <span style="margin-left: 5px;">↕️</span>
+            </th>
+            <th onclick="sortTable('tablecadet', 1)" style="cursor: pointer;">
+                Nom
+                <span style="margin-left: 5px;">↕️</span>
+            </th>
+            <th onclick="sortTable('tablecadet', 2)" style="cursor: pointer;">
+                Cognom
+                <span style="margin-left: 5px;">↕️</span>
+            </th>
+            <th onclick="sortTable('tablecadet', 3)" style="cursor: pointer;">
+                Dorsal
+                <span style="margin-left: 5px;">↕️</span>
+            </th>
+            <th onclick="sortTable('tablecadet', 4)" style="cursor: pointer;">
+                Categoria
+                <span style="margin-left: 5px;">↕️</span>
+            </th>
+            <th onclick="sortTable('tablecadet', 5)" style="cursor: pointer;">
+                Clas. Categ.
+                <span style="margin-left: 5px;">↕️</span>
+            </th>
+            <th onclick="sortTable('tablecadet', 6)" style="cursor: pointer;">
+                Temps Final
+                <span style="margin-left: 5px;">↕️</span>
+            </th>
+            <th onclick="sortTable('tablecadet', 7)" style="cursor: pointer;">
+                Maniga 1
+                <span style="margin-left: 5px;">↕️</span>
+            </th>
+            <th onclick="sortTable('tablecadet', 8)" style="cursor: pointer;">
+                Maniga 2
+                <span style="margin-left: 5px;">↕️</span>
+            </th>
+            <th onclick="sortTable('tablecadet', 9)" style="cursor: pointer;">
+                Maniga 3
+                <span style="margin-left: 5px;">↕️</span>
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td align='right'>3</td>
+            <td>David</td>
+            <td>Montoto</td>
+            <td align='right'>25</td>
+            <td>Cadet</td>
+            <td align='right'>1</td>
+            <td>14"860</td>
+            <td>15"078</td>
+            <td>15"078</td>
+            <td>14"860</td>
+        </tr>
+        <tr>
+            <td align='right'>4</td>
+            <td>Roger</td>
+            <td>Del Corral</td>
+            <td align='right'>27</td>
+            <td>Cadet</td>
+            <td align='right'>2</td>
+            <td>15"171</td>
+            <td>15"328</td>
+            <td>15"310</td>
+            <td>15"171</td>
+        </tr>
+        <tr>
+            <td align='right'>5</td>
+            <td>Gonzalo</td>
+            <td>Montoto</td>
+            <td align='right'>23</td>
+            <td>Cadet</td>
+            <td align='right'>3</td>
+            <td>15"580</td>
+            <td>16"107</td>
+            <td>15"686</td>
+            <td>15"580</td>
+        </tr>
+        <tr>
+            <td align='right'>21</td>
+            <td>Ruben</td>
+            <td>Doblas</td>
+            <td align='right'>26</td>
+            <td>Cadet</td>
+            <td align='right'>4</td>
+            <td>18"290</td>
+            <td>18"290</td>
+            <td>18"462</td>
+            <td>18"377</td>
+        </tr>
+    </tbody>
+</table>        </div>
+        <div id="tab-elit" class="tabcontent">
+            <h3>Categoría: Elit</h3>
+<table id="tableelit" class="sortable-table">
+    <thead>
+        <tr>
+            <th onclick="sortTable('tableelit', 0)" style="cursor: pointer;">
+                Clas
+                <span style="margin-left: 5px;">↕️</span>
+            </th>
+            <th onclick="sortTable('tableelit', 1)" style="cursor: pointer;">
+                Nom
+                <span style="margin-left: 5px;">↕️</span>
+            </th>
+            <th onclick="sortTable('tableelit', 2)" style="cursor: pointer;">
+                Cognom
+                <span style="margin-left: 5px;">↕️</span>
+            </th>
+            <th onclick="sortTable('tableelit', 3)" style="cursor: pointer;">
+                Dorsal
+                <span style="margin-left: 5px;">↕️</span>
+            </th>
+            <th onclick="sortTable('tableelit', 4)" style="cursor: pointer;">
+                Categoria
+                <span style="margin-left: 5px;">↕️</span>
+            </th>
+            <th onclick="sortTable('tableelit', 5)" style="cursor: pointer;">
+                Clas. Categ.
+                <span style="margin-left: 5px;">↕️</span>
+            </th>
+            <th onclick="sortTable('tableelit', 6)" style="cursor: pointer;">
+                Temps Final
+                <span style="margin-left: 5px;">↕️</span>
+            </th>
+            <th onclick="sortTable('tableelit', 7)" style="cursor: pointer;">
+                Maniga 1
+                <span style="margin-left: 5px;">↕️</span>
+            </th>
+            <th onclick="sortTable('tableelit', 8)" style="cursor: pointer;">
+                Maniga 2
+                <span style="margin-left: 5px;">↕️</span>
+            </th>
+            <th onclick="sortTable('tableelit', 9)" style="cursor: pointer;">
+                Maniga 3
+                <span style="margin-left: 5px;">↕️</span>
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td align='right'>1</td>
+            <td>Sergi</td>
+            <td>Coca</td>
+            <td align='right'>28</td>
+            <td>Elit</td>
+            <td align='right'>1</td>
+            <td>14"426</td>
+            <td>14"646</td>
+            <td>14"426</td>
+            <td>16"188</td>
+        </tr>
+        <tr>
+            <td align='right'>12</td>
+            <td>Daniel</td>
+            <td>Vargas</td>
+            <td align='right'>29</td>
+            <td>Elit</td>
+            <td align='right'>2</td>
+            <td>16"582</td>
+            <td>16"582</td>
+            <td>17"368</td>
+            <td>17"525</td>
+        </tr>
+        <tr>
+            <td align='right'>14</td>
+            <td>Joan</td>
+            <td>Dalmau</td>
+            <td align='right'>88</td>
+            <td>Elit</td>
+            <td align='right'>3</td>
+            <td>16"738</td>
+            <td>16"754</td>
+            <td>16"738</td>
+            <td>17"168</td>
+        </tr>
+    </tbody>
+</table>        </div>
+        <div id="tab-infantil" class="tabcontent">
+            <h3>Categoría: Infantil</h3>
+<table id="tableinfantil" class="sortable-table">
+    <thead>
+        <tr>
+            <th onclick="sortTable('tableinfantil', 0)" style="cursor: pointer;">
+                Clas
+                <span style="margin-left: 5px;">↕️</span>
+            </th>
+            <th onclick="sortTable('tableinfantil', 1)" style="cursor: pointer;">
+                Nom
+                <span style="margin-left: 5px;">↕️</span>
+            </th>
+            <th onclick="sortTable('tableinfantil', 2)" style="cursor: pointer;">
+                Cognom
+                <span style="margin-left: 5px;">↕️</span>
+            </th>
+            <th onclick="sortTable('tableinfantil', 3)" style="cursor: pointer;">
+                Dorsal
+                <span style="margin-left: 5px;">↕️</span>
+            </th>
+            <th onclick="sortTable('tableinfantil', 4)" style="cursor: pointer;">
+                Categoria
+                <span style="margin-left: 5px;">↕️</span>
+            </th>
+            <th onclick="sortTable('tableinfantil', 5)" style="cursor: pointer;">
+                Clas. Categ.
+                <span style="margin-left: 5px;">↕️</span>
+            </th>
+            <th onclick="sortTable('tableinfantil', 6)" style="cursor: pointer;">
+                Temps Final
+                <span style="margin-left: 5px;">↕️</span>
+            </th>
+            <th onclick="sortTable('tableinfantil', 7)" style="cursor: pointer;">
+                Maniga 1
+                <span style="margin-left: 5px;">↕️</span>
+            </th>
+            <th onclick="sortTable('tableinfantil', 8)" style="cursor: pointer;">
+                Maniga 2
+                <span style="margin-left: 5px;">↕️</span>
+            </th>
+            <th onclick="sortTable('tableinfantil', 9)" style="cursor: pointer;">
+                Maniga 3
+                <span style="margin-left: 5px;">↕️</span>
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td align='right'>2</td>
+            <td>Albert</td>
+            <td>Sala</td>
+            <td align='right'>40</td>
+            <td>Infantil</td>
+            <td align='right'>1</td>
+            <td>14"806</td>
+            <td>14"899</td>
+            <td>14"806</td>
+            <td>17"052</td>
+        </tr>
+        <tr>
+            <td align='right'>6</td>
+            <td>Bogdan Tudor</td>
+            <td>Birtas</td>
+            <td align='right'>44</td>
+            <td>Infantil</td>
+            <td align='right'>2</td>
+            <td>15"590</td>
+            <td>15"770</td>
+            <td>15"845</td>
+            <td>15"590</td>
+        </tr>
+        <tr>
+            <td align='right'>9</td>
+            <td>Aisac</td>
+            <td>Boldú</td>
+            <td align='right'>45</td>
+            <td>Infantil</td>
+            <td align='right'>3</td>
+            <td>16"354</td>
+            <td>16"354</td>
+            <td>16"528</td>
+            <td>18"660</td>
+        </tr>
+        <tr>
+            <td align='right'>11</td>
+            <td>Eloi</td>
+            <td>Ripoll</td>
+            <td align='right'>46</td>
+            <td>Infantil</td>
+            <td align='right'>4</td>
+            <td>16"465</td>
+            <td>16"465</td>
+            <td>16"845</td>
+            <td>16"721</td>
+        </tr>
+        <tr>
+            <td align='right'>15</td>
+            <td>David</td>
+            <td>Roset</td>
+            <td align='right'>138</td>
+            <td>Infantil</td>
+            <td align='right'>5</td>
+            <td>17"378</td>
+            <td>17"441</td>
+            <td>17"410</td>
+            <td>17"378</td>
+        </tr>
+    </tbody>
+</table>        </div>
+        <div id="tab-junior" class="tabcontent">
+            <h3>Categoría: Junior</h3>
+<table id="tablejunior" class="sortable-table">
+    <thead>
+        <tr>
+            <th onclick="sortTable('tablejunior', 0)" style="cursor: pointer;">
+                Clas
+                <span style="margin-left: 5px;">↕️</span>
+            </th>
+            <th onclick="sortTable('tablejunior', 1)" style="cursor: pointer;">
+                Nom
+                <span style="margin-left: 5px;">↕️</span>
+            </th>
+            <th onclick="sortTable('tablejunior', 2)" style="cursor: pointer;">
+                Cognom
+                <span style="margin-left: 5px;">↕️</span>
+            </th>
+            <th onclick="sortTable('tablejunior', 3)" style="cursor: pointer;">
+                Dorsal
+                <span style="margin-left: 5px;">↕️</span>
+            </th>
+            <th onclick="sortTable('tablejunior', 4)" style="cursor: pointer;">
+                Categoria
+                <span style="margin-left: 5px;">↕️</span>
+            </th>
+            <th onclick="sortTable('tablejunior', 5)" style="cursor: pointer;">
+                Clas. Categ.
+                <span style="margin-left: 5px;">↕️</span>
+            </th>
+            <th onclick="sortTable('tablejunior', 6)" style="cursor: pointer;">
+                Temps Final
+                <span style="margin-left: 5px;">↕️</span>
+            </th>
+            <th onclick="sortTable('tablejunior', 7)" style="cursor: pointer;">
+                Maniga 1
+                <span style="margin-left: 5px;">↕️</span>
+            </th>
+            <th onclick="sortTable('tablejunior', 8)" style="cursor: pointer;">
+                Maniga 2
+                <span style="margin-left: 5px;">↕️</span>
+            </th>
+            <th onclick="sortTable('tablejunior', 9)" style="cursor: pointer;">
+                Maniga 3
+                <span style="margin-left: 5px;">↕️</span>
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td align='right'>27</td>
+            <td>Randy</td>
+            <td>Salmeron</td>
+            <td align='right'>47</td>
+            <td>Junior</td>
+            <td align='right'>1</td>
+            <td>20"300</td>
+            <td>20"649</td>
+            <td>20"509</td>
+            <td>20"300</td>
+        </tr>
+    </tbody>
+</table>        </div>
+        <div id="tab-master_30" class="tabcontent">
+            <h3>Categoría: Master 30</h3>
+<table id="tablemaster_30" class="sortable-table">
+    <thead>
+        <tr>
+            <th onclick="sortTable('tablemaster_30', 0)" style="cursor: pointer;">
+                Clas
+                <span style="margin-left: 5px;">↕️</span>
+            </th>
+            <th onclick="sortTable('tablemaster_30', 1)" style="cursor: pointer;">
+                Nom
+                <span style="margin-left: 5px;">↕️</span>
+            </th>
+            <th onclick="sortTable('tablemaster_30', 2)" style="cursor: pointer;">
+                Cognom
+                <span style="margin-left: 5px;">↕️</span>
+            </th>
+            <th onclick="sortTable('tablemaster_30', 3)" style="cursor: pointer;">
+                Dorsal
+                <span style="margin-left: 5px;">↕️</span>
+            </th>
+            <th onclick="sortTable('tablemaster_30', 4)" style="cursor: pointer;">
+                Categoria
+                <span style="margin-left: 5px;">↕️</span>
+            </th>
+            <th onclick="sortTable('tablemaster_30', 5)" style="cursor: pointer;">
+                Clas. Categ.
+                <span style="margin-left: 5px;">↕️</span>
+            </th>
+            <th onclick="sortTable('tablemaster_30', 6)" style="cursor: pointer;">
+                Temps Final
+                <span style="margin-left: 5px;">↕️</span>
+            </th>
+            <th onclick="sortTable('tablemaster_30', 7)" style="cursor: pointer;">
+                Maniga 1
+                <span style="margin-left: 5px;">↕️</span>
+            </th>
+            <th onclick="sortTable('tablemaster_30', 8)" style="cursor: pointer;">
+                Maniga 2
+                <span style="margin-left: 5px;">↕️</span>
+            </th>
+            <th onclick="sortTable('tablemaster_30', 9)" style="cursor: pointer;">
+                Maniga 3
+                <span style="margin-left: 5px;">↕️</span>
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td align='right'>7</td>
+            <td>Dani</td>
+            <td>Rubio</td>
+            <td align='right'>52</td>
+            <td>Master 30</td>
+            <td align='right'>1</td>
+            <td>16"179</td>
+            <td>16"345</td>
+            <td>16"397</td>
+            <td>16"179</td>
+        </tr>
+        <tr>
+            <td align='right'>13</td>
+            <td>Víctor</td>
+            <td>Marín</td>
+            <td align='right'>50</td>
+            <td>Master 30</td>
+            <td align='right'>2</td>
+            <td>16"684</td>
+            <td>16"684</td>
+            <td>17"029</td>
+            <td>18"335</td>
+        </tr>
+        <tr>
+            <td align='right'>16</td>
+            <td>Robert</td>
+            <td>Bagés</td>
+            <td align='right'>51</td>
+            <td>Master 30</td>
+            <td align='right'>3</td>
+            <td>17"622</td>
+            <td>17"622</td>
+            <td>17"673</td>
+            <td>17"767</td>
+        </tr>
+        <tr>
+            <td align='right'>17</td>
+            <td>Marc</td>
+            <td>Balcells</td>
+            <td align='right'>175</td>
+            <td>Master 30</td>
+            <td align='right'>4</td>
+            <td>17"835</td>
+            <td>18"302</td>
+            <td>17"999</td>
+            <td>17"835</td>
+        </tr>
+        <tr>
+            <td align='right'>20</td>
+            <td>Arnau</td>
+            <td>Custodi</td>
+            <td align='right'>178</td>
+            <td>Master 30</td>
+            <td align='right'>5</td>
+            <td>18"244</td>
+            <td>18"618</td>
+            <td>18"674</td>
+            <td>18"244</td>
+        </tr>
+        <tr>
+            <td align='right'>22</td>
+            <td>Gerard</td>
+            <td>Dalmases</td>
+            <td align='right'>141</td>
+            <td>Master 30</td>
+            <td align='right'>6</td>
+            <td>18"477</td>
+            <td>18"505</td>
+            <td>18"477</td>
+            <td>18"799</td>
+        </tr>
+        <tr>
+            <td align='right'>23</td>
+            <td>Rodrigo</td>
+            <td>Santacruz</td>
+            <td align='right'>114</td>
+            <td>Master 30</td>
+            <td align='right'>7</td>
+            <td>18"920</td>
+            <td>19"107</td>
+            <td>19"155</td>
+            <td>18"920</td>
+        </tr>
+    </tbody>
+</table>        </div>
+        <div id="tab-master_40" class="tabcontent">
+            <h3>Categoría: Master 40</h3>
+<table id="tablemaster_40" class="sortable-table">
+    <thead>
+        <tr>
+            <th onclick="sortTable('tablemaster_40', 0)" style="cursor: pointer;">
+                Clas
+                <span style="margin-left: 5px;">↕️</span>
+            </th>
+            <th onclick="sortTable('tablemaster_40', 1)" style="cursor: pointer;">
+                Nom
+                <span style="margin-left: 5px;">↕️</span>
+            </th>
+            <th onclick="sortTable('tablemaster_40', 2)" style="cursor: pointer;">
+                Cognom
+                <span style="margin-left: 5px;">↕️</span>
+            </th>
+            <th onclick="sortTable('tablemaster_40', 3)" style="cursor: pointer;">
+                Dorsal
+                <span style="margin-left: 5px;">↕️</span>
+            </th>
+            <th onclick="sortTable('tablemaster_40', 4)" style="cursor: pointer;">
+                Categoria
+                <span style="margin-left: 5px;">↕️</span>
+            </th>
+            <th onclick="sortTable('tablemaster_40', 5)" style="cursor: pointer;">
+                Clas. Categ.
+                <span style="margin-left: 5px;">↕️</span>
+            </th>
+            <th onclick="sortTable('tablemaster_40', 6)" style="cursor: pointer;">
+                Temps Final
+                <span style="margin-left: 5px;">↕️</span>
+            </th>
+            <th onclick="sortTable('tablemaster_40', 7)" style="cursor: pointer;">
+                Maniga 1
+                <span style="margin-left: 5px;">↕️</span>
+            </th>
+            <th onclick="sortTable('tablemaster_40', 8)" style="cursor: pointer;">
+                Maniga 2
+                <span style="margin-left: 5px;">↕️</span>
+            </th>
+            <th onclick="sortTable('tablemaster_40', 9)" style="cursor: pointer;">
+                Maniga 3
+                <span style="margin-left: 5px;">↕️</span>
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td align='right'>8</td>
+            <td>Salvador</td>
+            <td>Mora</td>
+            <td align='right'>62</td>
+            <td>Master 40</td>
+            <td align='right'>1</td>
+            <td>16"257</td>
+            <td>16"447</td>
+            <td>16"831</td>
+            <td>16"257</td>
+        </tr>
+        <tr>
+            <td align='right'>10</td>
+            <td>Sergio</td>
+            <td>De La Cruz</td>
+            <td align='right'>56</td>
+            <td>Master 40</td>
+            <td align='right'>2</td>
+            <td>16"437</td>
+            <td>16"437</td>
+            <td>16"886</td>
+            <td>17"197</td>
+        </tr>
+        <tr>
+            <td align='right'>19</td>
+            <td>Jordi</td>
+            <td>Perez</td>
+            <td align='right'>94</td>
+            <td>Master 40</td>
+            <td align='right'>3</td>
+            <td>18"108</td>
+            <td>18"320</td>
+            <td>18"420</td>
+            <td>18"108</td>
+        </tr>
+        <tr>
+            <td align='right'>25</td>
+            <td>Pedro</td>
+            <td>Marin</td>
+            <td align='right'>112</td>
+            <td>Master 40</td>
+            <td align='right'>4</td>
+            <td>18"967</td>
+            <td>18"967</td>
+            <td>19"783</td>
+            <td>19"132</td>
+        </tr>
+        <tr>
+            <td align='right'>28</td>
+            <td>Albert</td>
+            <td>Oto</td>
+            <td align='right'>54</td>
+            <td>Master 40</td>
+            <td align='right'>5</td>
+            <td>22"799</td>
+            <td>23"037</td>
+            <td>23"466</td>
+            <td>22"799</td>
+        </tr>
+    </tbody>
+</table>        </div>
+        <div id="tab-master_50" class="tabcontent">
+            <h3>Categoría: Master 50</h3>
+<table id="tablemaster_50" class="sortable-table">
+    <thead>
+        <tr>
+            <th onclick="sortTable('tablemaster_50', 0)" style="cursor: pointer;">
+                Clas
+                <span style="margin-left: 5px;">↕️</span>
+            </th>
+            <th onclick="sortTable('tablemaster_50', 1)" style="cursor: pointer;">
+                Nom
+                <span style="margin-left: 5px;">↕️</span>
+            </th>
+            <th onclick="sortTable('tablemaster_50', 2)" style="cursor: pointer;">
+                Cognom
+                <span style="margin-left: 5px;">↕️</span>
+            </th>
+            <th onclick="sortTable('tablemaster_50', 3)" style="cursor: pointer;">
+                Dorsal
+                <span style="margin-left: 5px;">↕️</span>
+            </th>
+            <th onclick="sortTable('tablemaster_50', 4)" style="cursor: pointer;">
+                Categoria
+                <span style="margin-left: 5px;">↕️</span>
+            </th>
+            <th onclick="sortTable('tablemaster_50', 5)" style="cursor: pointer;">
+                Clas. Categ.
+                <span style="margin-left: 5px;">↕️</span>
+            </th>
+            <th onclick="sortTable('tablemaster_50', 6)" style="cursor: pointer;">
+                Temps Final
+                <span style="margin-left: 5px;">↕️</span>
+            </th>
+            <th onclick="sortTable('tablemaster_50', 7)" style="cursor: pointer;">
+                Maniga 1
+                <span style="margin-left: 5px;">↕️</span>
+            </th>
+            <th onclick="sortTable('tablemaster_50', 8)" style="cursor: pointer;">
+                Maniga 2
+                <span style="margin-left: 5px;">↕️</span>
+            </th>
+            <th onclick="sortTable('tablemaster_50', 9)" style="cursor: pointer;">
+                Maniga 3
+                <span style="margin-left: 5px;">↕️</span>
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td align='right'>18</td>
+            <td>Josep</td>
+            <td>Escayola</td>
+            <td align='right'>63</td>
+            <td>Master 50</td>
+            <td align='right'>1</td>
+            <td>18"091</td>
+            <td>18"091</td>
+            <td>18"498</td>
+            <td>18"201</td>
+        </tr>
+        <tr>
+            <td align='right'>24</td>
+            <td>Inocencio</td>
+            <td>Perez</td>
+            <td align='right'>90</td>
+            <td>Master 50</td>
+            <td align='right'>2</td>
+            <td>18"965</td>
+            <td>19"689</td>
+            <td>19"280</td>
+            <td>18"965</td>
+        </tr>
+        <tr>
+            <td align='right'>26</td>
+            <td>Jose Maria</td>
+            <td>Rojas De La</td>
+            <td align='right'>145</td>
+            <td>Master 50</td>
+            <td align='right'>3</td>
+            <td>19"456</td>
+            <td>19"456</td>
+            <td>19"652</td>
+            <td>19"695</td>
+        </tr>
+    </tbody>
+</table>        </div>
     </div>
 </div>
 
 <script>
 // Datos para las tablas
-const allData = [];
-const categorias = [];
+const allData = [[1, "Sergi", "Coca", 28, "Elit", 1, "14\"426", "14\"646", "14\"426", "16\"188"], [2, "Albert", "Sala", 40, "Infantil", 1, "14\"806", "14\"899", "14\"806", "17\"052"], [3, "David", "Montoto", 25, "Cadet", 1, "14\"860", "15\"078", "15\"078", "14\"860"], [4, "Roger", "Del Corral", 27, "Cadet", 2, "15\"171", "15\"328", "15\"310", "15\"171"], [5, "Gonzalo", "Montoto", 23, "Cadet", 3, "15\"580", "16\"107", "15\"686", "15\"580"], [6, "Bogdan Tudor", "Birtas", 44, "Infantil", 2, "15\"590", "15\"770", "15\"845", "15\"590"], [7, "Dani", "Rubio", 52, "Master 30", 1, "16\"179", "16\"345", "16\"397", "16\"179"], [8, "Salvador", "Mora", 62, "Master 40", 1, "16\"257", "16\"447", "16\"831", "16\"257"], [9, "Aisac", "Boldú", 45, "Infantil", 3, "16\"354", "16\"354", "16\"528", "18\"660"], [10, "Sergio", "De La Cruz", 56, "Master 40", 2, "16\"437", "16\"437", "16\"886", "17\"197"], [11, "Eloi", "Ripoll", 46, "Infantil", 4, "16\"465", "16\"465", "16\"845", "16\"721"], [12, "Daniel", "Vargas", 29, "Elit", 2, "16\"582", "16\"582", "17\"368", "17\"525"], [13, "Víctor", "Marín", 50, "Master 30", 2, "16\"684", "16\"684", "17\"029", "18\"335"], [14, "Joan", "Dalmau", 88, "Elit", 3, "16\"738", "16\"754", "16\"738", "17\"168"], [15, "David", "Roset", 138, "Infantil", 5, "17\"378", "17\"441", "17\"410", "17\"378"], [16, "Robert", "Bagés", 51, "Master 30", 3, "17\"622", "17\"622", "17\"673", "17\"767"], [17, "Marc", "Balcells", 175, "Master 30", 4, "17\"835", "18\"302", "17\"999", "17\"835"], [18, "Josep", "Escayola", 63, "Master 50", 1, "18\"091", "18\"091", "18\"498", "18\"201"], [19, "Jordi", "Perez", 94, "Master 40", 3, "18\"108", "18\"320", "18\"420", "18\"108"], [20, "Arnau", "Custodi", 178, "Master 30", 5, "18\"244", "18\"618", "18\"674", "18\"244"], [21, "Ruben", "Doblas", 26, "Cadet", 4, "18\"290", "18\"290", "18\"462", "18\"377"], [22, "Gerard", "Dalmases", 141, "Master 30", 6, "18\"477", "18\"505", "18\"477", "18\"799"], [23, "Rodrigo", "Santacruz", 114, "Master 30", 7, "18\"920", "19\"107", "19\"155", "18\"920"], [24, "Inocencio", "Perez", 90, "Master 50", 2, "18\"965", "19\"689", "19\"280", "18\"965"], [25, "Pedro", "Marin", 112, "Master 40", 4, "18\"967", "18\"967", "19\"783", "19\"132"], [26, "Jose Maria", "Rojas De La", 145, "Master 50", 3, "19\"456", "19\"456", "19\"652", "19\"695"], [27, "Randy", "Salmeron", 47, "Junior", 1, "20\"300", "20\"649", "20\"509", "20\"300"], [28, "Albert", "Oto", 54, "Master 40", 5, "22\"799", "23\"037", "23\"466", "22\"799"]];
+const categorias = ["Cadet", "Elit", "Infantil", "Junior", "Master 30", "Master 40", "Master 50"];
 
 // Función para cambiar pestañas
 function openTab(tabName, element) {
