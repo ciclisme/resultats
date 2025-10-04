@@ -127,21 +127,192 @@
         <button class="tablink active" onclick="openTab('tab-additional', this)">Darreres Arribades</button>
 
         <button class="tablink" onclick="openTab('tab-all', this)">Scratch</button>
+        <button class="tablink" onclick="openTab('tab-pre_benjamin', this)">Pre Benjamin</button>
     </div>
     <div class="tabcontent-container">
         <div id="tab-additional" class="tabcontent">
             <h3>Darreres Arribades - Maniga 1 </h3>
-<p>No hay datos adicionales disponibles.</p>        </div>
+<table id="tableAdditional" class="sortable-table">
+    <thead>
+        <tr>
+            <th onclick="sortTable('tableAdditional', 0)" style="cursor: pointer;">
+                Dorsal
+                <span style="margin-left: 5px;">↕️</span>
+            </th>
+            <th onclick="sortTable('tableAdditional', 1)" style="cursor: pointer;">
+                Nom
+                <span style="margin-left: 5px;">↕️</span>
+            </th>
+            <th onclick="sortTable('tableAdditional', 2)" style="cursor: pointer;">
+                Cognom
+                <span style="margin-left: 5px;">↕️</span>
+            </th>
+            <th onclick="sortTable('tableAdditional', 3)" style="cursor: pointer;">
+                Clas_Categ
+                <span style="margin-left: 5px;">↕️</span>
+            </th>
+            <th onclick="sortTable('tableAdditional', 4)" style="cursor: pointer;">
+                Categoria
+                <span style="margin-left: 5px;">↕️</span>
+            </th>
+            <th onclick="sortTable('tableAdditional', 5)" style="cursor: pointer;">
+                Temps Maniga
+                <span style="margin-left: 5px;">↕️</span>
+            </th>
+            <th onclick="sortTable('tableAdditional', 6)" style="cursor: pointer;">
+                Clas Scratch
+                <span style="margin-left: 5px;">↕️</span>
+            </th>
+            <th onclick="sortTable('tableAdditional', 7)" style="cursor: pointer;">
+                Hora
+                <span style="margin-left: 5px;">↕️</span>
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td align='right'>146</td>
+            <td>Marko</td>
+            <td>Neretnieks</td>
+            <td align='right'>1</td>
+            <td>Pre Benjamin</td>
+            <td>31"722</td>
+            <td align='right'>1</td>
+            <td>15:21:27.4993</td>
+        </tr>
+    </tbody>
+</table>        </div>
         <div id="tab-all" class="tabcontent" style="display:block;">
             <h3>Tots els Participants</h3>
-<p>No hay datos disponibles</p>        </div>
+<table id="tableAll" class="sortable-table">
+    <thead>
+        <tr>
+            <th onclick="sortTable('tableAll', 0)" style="cursor: pointer;">
+                Clas
+                <span style="margin-left: 5px;">↕️</span>
+            </th>
+            <th onclick="sortTable('tableAll', 1)" style="cursor: pointer;">
+                Nom
+                <span style="margin-left: 5px;">↕️</span>
+            </th>
+            <th onclick="sortTable('tableAll', 2)" style="cursor: pointer;">
+                Cognom
+                <span style="margin-left: 5px;">↕️</span>
+            </th>
+            <th onclick="sortTable('tableAll', 3)" style="cursor: pointer;">
+                Dorsal
+                <span style="margin-left: 5px;">↕️</span>
+            </th>
+            <th onclick="sortTable('tableAll', 4)" style="cursor: pointer;">
+                Categoria
+                <span style="margin-left: 5px;">↕️</span>
+            </th>
+            <th onclick="sortTable('tableAll', 5)" style="cursor: pointer;">
+                Clas. Categ.
+                <span style="margin-left: 5px;">↕️</span>
+            </th>
+            <th onclick="sortTable('tableAll', 6)" style="cursor: pointer;">
+                Temps Final
+                <span style="margin-left: 5px;">↕️</span>
+            </th>
+            <th onclick="sortTable('tableAll', 7)" style="cursor: pointer;">
+                Maniga 1
+                <span style="margin-left: 5px;">↕️</span>
+            </th>
+            <th onclick="sortTable('tableAll', 8)" style="cursor: pointer;">
+                Maniga 2
+                <span style="margin-left: 5px;">↕️</span>
+            </th>
+            <th onclick="sortTable('tableAll', 9)" style="cursor: pointer;">
+                Maniga 3
+                <span style="margin-left: 5px;">↕️</span>
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td align='right'>1</td>
+            <td>Marko</td>
+            <td>Neretnieks</td>
+            <td align='right'>146</td>
+            <td>Pre Benjamin</td>
+            <td align='right'>1</td>
+            <td>31"722</td>
+            <td>31"722</td>
+            <td></td>
+            <td></td>
+        </tr>
+    </tbody>
+</table>        </div>
+        <div id="tab-pre_benjamin" class="tabcontent">
+            <h3>Categoría: Pre Benjamin</h3>
+<table id="tablepre_benjamin" class="sortable-table">
+    <thead>
+        <tr>
+            <th onclick="sortTable('tablepre_benjamin', 0)" style="cursor: pointer;">
+                Clas
+                <span style="margin-left: 5px;">↕️</span>
+            </th>
+            <th onclick="sortTable('tablepre_benjamin', 1)" style="cursor: pointer;">
+                Nom
+                <span style="margin-left: 5px;">↕️</span>
+            </th>
+            <th onclick="sortTable('tablepre_benjamin', 2)" style="cursor: pointer;">
+                Cognom
+                <span style="margin-left: 5px;">↕️</span>
+            </th>
+            <th onclick="sortTable('tablepre_benjamin', 3)" style="cursor: pointer;">
+                Dorsal
+                <span style="margin-left: 5px;">↕️</span>
+            </th>
+            <th onclick="sortTable('tablepre_benjamin', 4)" style="cursor: pointer;">
+                Categoria
+                <span style="margin-left: 5px;">↕️</span>
+            </th>
+            <th onclick="sortTable('tablepre_benjamin', 5)" style="cursor: pointer;">
+                Clas. Categ.
+                <span style="margin-left: 5px;">↕️</span>
+            </th>
+            <th onclick="sortTable('tablepre_benjamin', 6)" style="cursor: pointer;">
+                Temps Final
+                <span style="margin-left: 5px;">↕️</span>
+            </th>
+            <th onclick="sortTable('tablepre_benjamin', 7)" style="cursor: pointer;">
+                Maniga 1
+                <span style="margin-left: 5px;">↕️</span>
+            </th>
+            <th onclick="sortTable('tablepre_benjamin', 8)" style="cursor: pointer;">
+                Maniga 2
+                <span style="margin-left: 5px;">↕️</span>
+            </th>
+            <th onclick="sortTable('tablepre_benjamin', 9)" style="cursor: pointer;">
+                Maniga 3
+                <span style="margin-left: 5px;">↕️</span>
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td align='right'>1</td>
+            <td>Marko</td>
+            <td>Neretnieks</td>
+            <td align='right'>146</td>
+            <td>Pre Benjamin</td>
+            <td align='right'>1</td>
+            <td>31"722</td>
+            <td>31"722</td>
+            <td></td>
+            <td></td>
+        </tr>
+    </tbody>
+</table>        </div>
     </div>
 </div>
 
 <script>
 // Datos para las tablas
-const allData = [];
-const categorias = [];
+const allData = [[1, "Marko", "Neretnieks", 146, "Pre Benjamin", 1, "31\"722", "31\"722", "", ""]];
+const categorias = ["Pre Benjamin"];
 
 // Función para cambiar pestañas
 function openTab(tabName, element) {
